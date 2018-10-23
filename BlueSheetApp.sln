@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueSheetApp", "BlueSheetApp\BlueSheetApp.csproj", "{FB994C3B-043B-4FD1-B7DA-075C8E7F19EC}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "BlueSheet", "BlueSheet\BlueSheet.vdproj", "{D8E0E292-5F8A-452E-98F6-649D55D96E80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB994C3B-043B-4FD1-B7DA-075C8E7F19EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB994C3B-043B-4FD1-B7DA-075C8E7F19EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB994C3B-043B-4FD1-B7DA-075C8E7F19EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB994C3B-043B-4FD1-B7DA-075C8E7F19EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8E0E292-5F8A-452E-98F6-649D55D96E80}.Debug|Any CPU.ActiveCfg = Debug
+		{D8E0E292-5F8A-452E-98F6-649D55D96E80}.Release|Any CPU.ActiveCfg = Release
+		{D8E0E292-5F8A-452E-98F6-649D55D96E80}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A53D51CB-8BC5-4267-9541-929CD882B44D}
+	EndGlobalSection
+EndGlobal
