@@ -67,6 +67,8 @@ namespace BlueSheetApp
 
                 txtUserId.Text = sr.ReadLine();
                 txtPassword.Text = sr.ReadLine();
+
+                sr.Close();
             }
         }
 

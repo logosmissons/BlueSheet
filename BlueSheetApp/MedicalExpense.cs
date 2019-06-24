@@ -448,12 +448,14 @@ namespace BlueSheetApp
     public class PersonalResponsibilityTotalInfo
     {
         public String IncidentNo;
+        public String ICD10CodeDescription;
         public DateTime? IncidentOccurrenceDate;
         public Decimal PersonalResponsibilityTotal;
 
         public PersonalResponsibilityTotalInfo()
         {
             IncidentNo = String.Empty;
+            ICD10CodeDescription = String.Empty;
             IncidentOccurrenceDate = null;
             PersonalResponsibilityTotal = 0;
         }
@@ -461,6 +463,14 @@ namespace BlueSheetApp
         public PersonalResponsibilityTotalInfo(String incident_no, DateTime incident_occurrence_date, Decimal personal_responsibility_total)
         {
             IncidentNo = incident_no;
+            IncidentOccurrenceDate = incident_occurrence_date;
+            PersonalResponsibilityTotal = personal_responsibility_total;
+        }
+
+        public PersonalResponsibilityTotalInfo(String incident_no, String icd10code_description, DateTime incident_occurrence_date, Decimal personal_responsibility_total)
+        {
+            IncidentNo = incident_no;
+            ICD10CodeDescription = icd10code_description;
             IncidentOccurrenceDate = incident_occurrence_date;
             PersonalResponsibilityTotal = personal_responsibility_total;
         }
