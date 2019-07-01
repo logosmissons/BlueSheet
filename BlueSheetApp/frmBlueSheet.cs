@@ -117,29 +117,31 @@ namespace BlueSheetApp
 
         // English message
         private String strDearMember = "Dear ";
-        private String strEnglishGreetingMessage1 = "We thank you for participating in our health care sharing ministry and pray that the grace of our Lord Jesus Christ " +
-                                                      "overflows in your family business as we continue to pray for your recovery.";
-        private String strEnglishGreetingMessage2 = "Your medical bills that were submitted have been processed. Please carefully review your summary below. " +
-                                                    "If there are any discrepancies, please notify Needs Processing Department(NPD) immediately. " +
-                                                    "If you have been notified by our NPD about incomplete documentation or outstanding balances, please submit " +
-                                                    "requested documents as soon as possible to avoid further delay of your needs processing.";
-        private String strEnglishGreetingMessage3 = "If you have any question or concerns, please contact NPD Monday through Friday 9 A.M. to 5:30 P.M. (CST)";
+        private String strEnglishGreetingMessage1 = "We thank you for participating in our health care sharing ministry and pray that the grace of our Lord " +
+                                                    "Jesus Christ overflows in you and your family as we continue to pray for your recovery.";
 
-        private String strEnglishGreetingMessage4 = "\nBest regards,";
+        private String strEnglishGreetingMessage2 = "Your medical bills that were submitted have been processed. Please carefully review your summary below." +
+                                                    "\n\nIf there are any discrepancies, please notify our Needs Processing Department(NPD) immediately. " +
+                                                    "If you have been notified by our NPD about incomplete documentation or outstanding balances, " +
+                                                    "please submit the requested documents as soon as possible to avoid further delay of your needs sharing process.";
 
-        private String strEnglishPRGreetingMessage1 = "Christian Mutual Med-Aid(CMM) follows the Word of God.Together we share our brothers’ and sisters’ burdens " +
-                                                      "as the Bible says in Galatian 6:2. Also, the Bible states that each person must carry their own load in Galatian 6:5. " +
-                                                      "We define that load as Personal Responsibility(CMM Guidelines, Section VII. Needs Processing and Sharing, B.Personal Responsibility). " +
+        private String strEnglishGreetingMessage3 = "\nIf you have any questions or concerns, please contact our NPD at 773-777-8889, Monday through Friday, from 9 AM to 5:30 PM (CST).";
+
+        private String strEnglishGreetingMessage4 = "\nSincerely,";
+
+        private String strEnglishPRGreetingMessage1 = "Christian Mutual Med-Aid(CMM) follows the Word of God.Together we share our brothers’ and sisters’ burdens as the Bible says " +
+                                                      "in Galatian 6:2. Also, the Bible states that each person must carry their own load in Galatian 6:5.\n" +
+                                                      "We define that load as Personal Responsibility (CMM Guidelines, Section VII. Needs Processing and Sharing, B. Personal Responsibility).\n" +
                                                       "Please see the table below for your convenience.";
         private String strEnglishPRGreetingMessage2 = "\nAccording to CMM Guidelines, your medical needs share request amount does not exceed the program’s Personal Responsibility. " +
                                                       "Therefore, we are not able to share your medical needs.";
-        private String strEnglishPRGreetingMessage3 = "Should you have any questions regarding this, please contact the Needs Processing Department at 773-777-8889 Ext) 5003, " +
-                                                      "Monday through Friday, from 9:00 AM to 5:30 PM, CST.";
+        private String strEnglishPRGreetingMessage3 = "Should you have any questions regarding this, please contact the Needs Processing Department at 773-777-8889, Monday through Friday, " +
+                                                      "from 9:00 AM to 5:30 PM, CST.";
 
-        private String strEnglishPRGreetingMessage4 = "We thank you for participating in our health care sharing ministry and pray that the overflowing grace of our Lord Jesus " +
-                                                      "be with you and your family.";
+        private String strEnglishPRGreetingMessage4 = "We thank you for participating in our health care sharing ministry and pray that the overflowing grace of our Lord Jesus be with you " +
+                                                      "and your family.";
 
-        private String strEnglishPRGreetingMessage5 = "\n\nBest regards,";
+        private String strEnglishPRGreetingMessage5 = "\n\nSincerely,";
 
         private String strCMM_NeedProcessing = "NEEDS PROCESSING DEPARTMENT";
         //private String strNP_Phone_Fax_Email = "T.773-777-8889(EXT5003)\nF.773-777-0004 EMAIL:NPD@CMMLOGOS.ORG";
@@ -6315,7 +6317,7 @@ namespace BlueSheetApp
                 paraGreetingMessage2.Format.Font.Size = 9;
                 //paraGreetingMessage2.Format.LeftIndent = "0.5in";
                 //paraGreetingMessage2.Format.RightIndent = "0.5in";
-                paraGreetingMessage2.Format.Alignment = ParagraphAlignment.Justify;
+                paraGreetingMessage2.Format.Alignment = ParagraphAlignment.Left;
                 //paraGreetingMessage2.AddFormattedText(strGreetingMessagePara2, TextFormat.NotBold);
                 paraGreetingMessage2.AddFormattedText(strEnglishGreetingMessage2, TextFormat.NotBold);
 
@@ -8351,7 +8353,7 @@ namespace BlueSheetApp
                 paraPRGreetingMessage1.Format.SpaceAfter = "5pt";
                 //paraGreetingMessage.Format.LeftIndent = "0.5in";
                 //paraGreetingMessage.Format.RightIndent = "0.5in";
-                paraPRGreetingMessage1.Format.Alignment = ParagraphAlignment.Justify;
+                paraPRGreetingMessage1.Format.Alignment = ParagraphAlignment.Left;
                 //paraGreetingMessage.AddFormattedText(strGreetingMessage, TextFormat.NotBold);
                 paraPRGreetingMessage1.AddFormattedText(strEnglishPRGreetingMessage1, TextFormat.NotBold);
 
@@ -8471,7 +8473,7 @@ namespace BlueSheetApp
                 paraPRGreetingMessage2.Format.SpaceAfter = "5pt";
                 //paraGreetingMessage2.Format.LeftIndent = "0.5in";
                 //paraGreetingMessage2.Format.RightIndent = "0.5in";
-                paraPRGreetingMessage2.Format.Alignment = ParagraphAlignment.Justify;
+                paraPRGreetingMessage2.Format.Alignment = ParagraphAlignment.Left;
                 paraPRGreetingMessage2.AddFormattedText(strEnglishPRGreetingMessage2, TextFormat.NotBold);
 
                 Paragraph paraPRGreetingMessage3 = section.AddParagraph();
@@ -8481,7 +8483,7 @@ namespace BlueSheetApp
                 paraPRGreetingMessage3.Format.SpaceAfter = "5pt";
                 //paraGreetingMessage3.Format.LeftIndent = "0.5in";
                 //paraGreetingMessage3.Format.RightIndent = "0.5in";
-                paraPRGreetingMessage3.Format.Alignment = ParagraphAlignment.Justify;
+                paraPRGreetingMessage3.Format.Alignment = ParagraphAlignment.Left;
                 paraPRGreetingMessage3.AddFormattedText(strEnglishPRGreetingMessage3, TextFormat.NotBold);
 
 
@@ -8492,7 +8494,7 @@ namespace BlueSheetApp
                 paraPRGreetingMessage4.Format.SpaceAfter = "5pt";
                 //paraGreetingMessage3.Format.LeftIndent = "0.5in";
                 //paraGreetingMessage3.Format.RightIndent = "0.5in";
-                paraPRGreetingMessage4.Format.Alignment = ParagraphAlignment.Justify;
+                paraPRGreetingMessage4.Format.Alignment = ParagraphAlignment.Left;
                 paraPRGreetingMessage4.AddFormattedText(strEnglishPRGreetingMessage4, TextFormat.NotBold);
 
                 Paragraph paraPRGreetingMessage5 = section.AddParagraph();
