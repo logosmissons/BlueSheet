@@ -413,7 +413,8 @@ namespace BlueSheetApp
                             {
                                 PersonalResponsibilityTotalEntered = new PersonalResponsibilityTotalInfo();
                                 PersonalResponsibilityTotalEntered.IncidentNo = medbill.c4g_Incident__r.Name;
-                                if (medbill.c4g_Incident__r.c4g_ICD10_Code__c != null)
+                                //if (medbill.c4g_Incident__r.c4g_ICD10_Code__c != null)
+                                if (medbill.c4g_Incident__r.c4g_ICD10_Code__r != null)
                                     PersonalResponsibilityTotalEntered.ICD10CodeDescription = medbill.c4g_Incident__r.c4g_ICD10_Code__r.Name;
                                 else
                                     PersonalResponsibilityTotalEntered.ICD10CodeDescription = String.Empty;
@@ -3215,6 +3216,7 @@ namespace BlueSheetApp
                 //paraMembershipInfo.Format.SpaceBefore = "0.70in";
                 paraMembershipInfo.Format.SpaceBefore = "0.20in";
                 paraMembershipInfo.Format.SpaceAfter = "0.20in";
+                paraMembershipInfo.Format.LeftIndent = "0.75in";
                 //paraMembershipInfo.Format.LeftIndent = "0.5in";
                 //paraMembershipInfo.Format.RightIndent = "0.5in";
                 paraMembershipInfo.Format.Alignment = ParagraphAlignment.Left;
@@ -5377,6 +5379,8 @@ namespace BlueSheetApp
                 //paraMembershipInfo.Format.SpaceBefore = "0.70in";
                 paraMembershipInfo.Format.SpaceBefore = "0.20in";
                 paraMembershipInfo.Format.SpaceAfter = "0.20in";
+                paraMembershipInfo.Format.LeftIndent = "0.75in";
+                //paraMembershipInfo.Format.LeftIndent = "1.00in";
                 //paraMembershipInfo.Format.LeftIndent = "0.5in";
                 //paraMembershipInfo.Format.RightIndent = "0.5in";
                 paraMembershipInfo.Format.Alignment = ParagraphAlignment.Left;
@@ -6276,6 +6280,7 @@ namespace BlueSheetApp
                 //paraMembershipInfo.Format.SpaceBefore = "0.7in";
                 paraMembershipInfo.Format.SpaceBefore = "0.2in";
                 paraMembershipInfo.Format.SpaceAfter = "0.2in";
+                paraMembershipInfo.Format.LeftIndent = "0.75in";
                 //paraMembershipInfo.Format.LeftIndent = "0.5in";
                 //paraMembershipInfo.Format.RightIndent = "0.5in";
                 paraMembershipInfo.Format.Alignment = ParagraphAlignment.Left;
@@ -8319,6 +8324,7 @@ namespace BlueSheetApp
                 //paraMembershipInfo.Format.SpaceBefore = "0.70in";
                 paraMembershipInfo.Format.SpaceBefore = "0.20in";
                 paraMembershipInfo.Format.SpaceAfter = "0.20in";
+                paraMembershipInfo.Format.LeftIndent = "0.75in";
                 //paraMembershipInfo.Format.LeftIndent = "0.5in";
                 //paraMembershipInfo.Format.RightIndent = "0.5in";
                 paraMembershipInfo.Format.Alignment = ParagraphAlignment.Left;
