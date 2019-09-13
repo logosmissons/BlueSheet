@@ -145,7 +145,8 @@ namespace BlueSheetApp
 
         private String strCMM_NeedProcessing = "NEEDS PROCESSING DEPARTMENT";
         //private String strNP_Phone_Fax_Email = "T.773-777-8889(EXT5003)\nF.773-777-0004 EMAIL:NPD@CMMLOGOS.ORG";
-        private String strNP_Phone_Fax_Email = "T.773-777-8889(EXT5003)\nnpd@cmmlogos.org";
+        //private String strNP_Phone_Fax_Email = "T.773-777-8889(EXT5003)\nnpd@cmmlogos.org";
+        private String strNP_Phone_Fax_Email = "T.773-777-8889\nnpd@cmmlogos.org";
 
         public List<PaidMedicalExpenseTableRow> lstPaidMedicalExpenseTableRow = new List<PaidMedicalExpenseTableRow>();
         public List<CMMPendingPaymentTableRow> lstCMMPendingPaymentTableRow = new List<CMMPendingPaymentTableRow>();
@@ -444,6 +445,7 @@ namespace BlueSheetApp
 
                                 BlueSheetSForce.Medical_Bill__c medbillNoSharing = qrMedBillNoSharing.records[0] as BlueSheetSForce.Medical_Bill__c;
 
+
                                 String strSoqlSettlementNoSharing = "select c4g_Medical_Bill__r.Name, c4g_Medical_Bill__r.Bill_Date__c, c4g_Medical_Bill__r.Medical_Provider__r.Name, " +
                                                                     "c4g_Medical_Bill__r.c4g_Bill_Amount__c, c4g_Type__c, c4g_Personal_Responsibility_Type__c, c4g_Amount__c " +
                                                                     "from Settlement__c " +
@@ -535,7 +537,7 @@ namespace BlueSheetApp
                                                                               "c4g_Medical_Bill__r.Name = '" + medBillIneligible.Name + "' and " +
                                                                               "(c4g_Medical_Bill__r.Bill_Status__c = 'Closed' or " +
                                                                               "c4g_Medical_Bill__r.Bill_Status__c = 'Ineligible') and " +
-                                                                              "c4g_Amount__c > 0";
+                                                                              "c4g_Amount__c >= 0";
 
                                     BlueSheetSForce.QueryResult qrSettlementMedBillIneligible = Sfdcbinding.query(strSoqlIneligibleSettlements);
 
