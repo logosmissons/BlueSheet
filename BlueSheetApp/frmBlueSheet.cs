@@ -5617,7 +5617,7 @@ namespace BlueSheetApp
 
                 //paraNPStatement.AddFormattedText("본인 부담금 또는 지원 불가 의료비 내역서\n", TextFormat.Bold);
                 //paraNPStatement.AddFormattedText("본인 부담금 내역서\n", TextFormat.Bold);
-                paraNPStatement.AddFormattedText("의료비 지원 내역서\n", TextFormat.Bold);
+                paraNPStatement.AddFormattedText("의료비 정산 내역서\n", TextFormat.Bold);
 
                 Paragraph paraPersonalResponsibilityTotal = section.AddParagraph();
                 paraPersonalResponsibilityTotal.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
