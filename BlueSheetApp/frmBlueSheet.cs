@@ -3184,9 +3184,16 @@ namespace BlueSheetApp
                 //paraCMMAddress.Format.RightIndent = "0.5in";
                 paraCMMAddress.Format.Alignment = ParagraphAlignment.Center;
 
+                //String strVerticalBar = " | ";
+                //String strStreet = "5235 N. Elston Ave.";
+                //String strCityStateZip = "Chicago, IL 60630";
+                //String strPhone = "Phone 773.777.8889";
+                //String strFax = "Fax 773.777.0004";
+                //String strWebsiteAddr = "www.cmmlogos.org";
+
                 String strVerticalBar = " | ";
-                String strStreet = "5235 N. Elston Ave.";
-                String strCityStateZip = "Chicago, IL 60630";
+                String strStreet = "2315 Sanders Rd";
+                String strCityStateZip = "Northbrook, IL 60062";
                 String strPhone = "Phone 773.777.8889";
                 String strFax = "Fax 773.777.0004";
                 String strWebsiteAddr = "www.cmmlogos.org";
@@ -5349,9 +5356,16 @@ namespace BlueSheetApp
                 paraCMMAddress.Format.SpaceAfter = "0.25in";
                 paraCMMAddress.Format.Alignment = ParagraphAlignment.Center;
 
+                //String strVerticalBar = " | ";
+                //String strStreet = "5235 N. Elston Ave.";
+                //String strCityStateZip = "Chicago, IL 60630";
+                //String strPhone = "Phone 773.777.8889";
+                //String strFax = "Fax 773.777.0004";
+                //String strWebsiteAddr = "www.cmmlogos.org";
+
                 String strVerticalBar = " | ";
-                String strStreet = "5235 N. Elston Ave.";
-                String strCityStateZip = "Chicago, IL 60630";
+                String strStreet = "2315 Sanders Rd";
+                String strCityStateZip = "Northbrook, IL 60062";
                 String strPhone = "Phone 773.777.8889";
                 String strFax = "Fax 773.777.0004";
                 String strWebsiteAddr = "www.cmmlogos.org";
@@ -6249,9 +6263,16 @@ namespace BlueSheetApp
                 //paraCMMAddress.Format.RightIndent = "0.5in";
                 paraCMMAddress.Format.Alignment = ParagraphAlignment.Center;
 
+                //String strVerticalBar = " | ";
+                //String strStreet = "5235 N. Elston Ave.";
+                //String strCityStateZip = "Chicago, IL 60630";
+                //String strPhone = "Phone 773.777.8889";
+                //String strFax = "773.777.0004";
+                //String strWebsiteAddr = "www.cmmlogos.org";
+
                 String strVerticalBar = " | ";
-                String strStreet = "5235 N. Elston Ave.";
-                String strCityStateZip = "Chicago, IL 60630";
+                String strStreet = "2315 Sanders Rd";
+                String strCityStateZip = "Northbrook, IL 60062";
                 String strPhone = "Phone 773.777.8889";
                 String strFax = "773.777.0004";
                 String strWebsiteAddr = "www.cmmlogos.org";
@@ -8295,9 +8316,16 @@ namespace BlueSheetApp
                 paraCMMAddress.Format.SpaceAfter = "0.25in";
                 paraCMMAddress.Format.Alignment = ParagraphAlignment.Center;
 
+                //String strVerticalBar = " | ";
+                //String strStreet = "5235 N. Elston Ave.";
+                //String strCityStateZip = "Chicago, IL 60630";
+                //String strPhone = "Phone 773.777.8889";
+                //String strFax = "Fax 773.777.0004";
+                //String strWebsiteAddr = "www.cmmlogos.org";
+
                 String strVerticalBar = " | ";
-                String strStreet = "5235 N. Elston Ave.";
-                String strCityStateZip = "Chicago, IL 60630";
+                String strStreet = "2315 Sanders Rd";
+                String strCityStateZip = "Northbrook, IL 60062";
                 String strPhone = "Phone 773.777.8889";
                 String strFax = "Fax 773.777.0004";
                 String strWebsiteAddr = "www.cmmlogos.org";
