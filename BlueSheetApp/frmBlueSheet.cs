@@ -103,7 +103,7 @@ namespace BlueSheetApp
         private String strPRGreetingMessagePara1 = "신청하신 의료비가 정산되어 알려드립니다.";
         private String strPRGreetingMessagePara2 = "성경 말씀에 따라 의료비 나눔 사역을 실천하고 있는 기독의료상조회에는 서로의 짐을 나누어 지는(갈 6:2) " +
                                                    "‘의료비 나눔’과 각각 자기의 짐을 지는(갈 6:5) ‘본인 부담금’이 있습니다. ";
-        private String strPRGreetingMessagePara3 = "현재 신청하신 의료비는 회원님이 가입하신 프로그램의  본인 부담금 또는 지원 불가 의료비에 해당하는 금액으로 본회의 가이드라인에 따라" +
+        private String strPRGreetingMessagePara3 = "현재 신청하신 의료비는 회원님이 가입하신 레벨의  본인 부담금 또는 지원 불가 의료비에 해당하는 금액으로 본회의 가이드라인에 따라" +
                                                    " 지원이 되지 않음을 알려드립니다. ";
         private String strPRGreetingMessagePara4 = "\n아래  의료비 정산 내역을 확인하시고 정산된 금액이나 내용에 문의사항이 있으면 의료비 지원부 (773-777-8889 Ext. 5003)로 연락주시기 바랍니다.";
         private String strPRGreetingMessagePara5 = "CMM 사역에 참여하여 주셔서 진심으로 감사드리며,  주 예수 그리스도의 평강이 늘 함께 하시길 기도합니다.";
@@ -5476,7 +5476,7 @@ namespace BlueSheetApp
                 cellProgramHeader.Format.Font.Size = 8;
                 cellProgramHeader.Format.Font.Name = "Malgun Gothic";
                 cellProgramHeader.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellProgramHeader.AddParagraph("프로그램");
+                cellProgramHeader.AddParagraph("레벨");
 
                 MigraDocDOM.Tables.Cell cellPersonalResponsibility = rowHeader.Cells[1];
                 cellPersonalResponsibility.Format.Font.Bold = true;
