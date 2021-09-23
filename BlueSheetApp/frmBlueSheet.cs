@@ -61,6 +61,7 @@ namespace BlueSheetApp
 
         public String strPrimaryName = String.Empty;
         public String strMembershipId = String.Empty;
+        public String strProgram = String.Empty;
         public String strIndividualName = String.Empty;
         public String strIndividualLastName = String.Empty;
         public String strIndividualMiddleName = String.Empty;
@@ -103,9 +104,9 @@ namespace BlueSheetApp
         private String strPRGreetingMessagePara1 = "신청하신 의료비가 정산되어 알려드립니다.";
         private String strPRGreetingMessagePara2 = "성경 말씀에 따라 의료비 나눔 사역을 실천하고 있는 기독의료상조회에는 서로의 짐을 나누어 지는(갈 6:2) " +
                                                    "‘의료비 나눔’과 각각 자기의 짐을 지는(갈 6:5) ‘본인 부담금’이 있습니다. ";
-        private String strPRGreetingMessagePara3 = "현재 신청하신 의료비는 회원님이 가입하신 레벨의  본인 부담금 또는 지원 불가 의료비에 해당하는 금액으로 본회의 가이드라인에 따라" +
-                                                   " 지원이 되지 않음을 알려드립니다. ";
-        private String strPRGreetingMessagePara4 = "\n아래  의료비 정산 내역을 확인하시고 정산된 금액이나 내용에 문의사항이 있으면 의료비 지원부 (773-777-8889 Ext. 5003)로 연락주시기 바랍니다.";
+        private String strPRGreetingMessagePara3 = "현재 신청하신 의료비는 회원님이 가입하신 레벨의 본인 부담금으로 책정되어 지원되는 금액이 없거나 또는 " +
+                                                   "지원 불가 의료비에 해당하는 금액으로 기독으료상조회의 가이드라인에 따라 지원이 되지 않음을 알려드립니다.";
+        private String strPRGreetingMessagePara4 = "아래  의료비 정산 내역을 확인하시고 정산된 금액이나 내용에 문의사항이 있으면 의료비 지원부 (773-777-8889 Ext. 5003)로 연락주시기 바랍니다.";
         private String strPRGreetingMessagePara5 = "CMM 사역에 참여하여 주셔서 진심으로 감사드리며,  주 예수 그리스도의 평강이 늘 함께 하시길 기도합니다.";
         private String strPRGreetingMessagePara6 = "감사합니다.";
 
@@ -129,12 +130,23 @@ namespace BlueSheetApp
 
         private String strEnglishGreetingMessage4 = "\nSincerely,";
 
+        //private String strEnglishPRGreetingMessage1 = "Christian Mutual Med-Aid(CMM) follows the Word of God.Together we share our brothers’ and sisters’ burdens as the Bible says " +
+        //                                              "in Galatian 6:2. Also, the Bible states that each person must carry their own load in Galatian 6:5.\n" +
+        //                                              "We define that load as Personal Responsibility (CMM Guidelines, Section VII. Needs Processing and Sharing, B. Personal Responsibility).\n" +
+        //                                              "Please see the table below for your convenience.";
+
         private String strEnglishPRGreetingMessage1 = "Christian Mutual Med-Aid(CMM) follows the Word of God.Together we share our brothers’ and sisters’ burdens as the Bible says " +
                                                       "in Galatian 6:2. Also, the Bible states that each person must carry their own load in Galatian 6:5.\n" +
                                                       "We define that load as Personal Responsibility (CMM Guidelines, Section VII. Needs Processing and Sharing, B. Personal Responsibility).\n" +
-                                                      "Please see the table below for your convenience.";
-        private String strEnglishPRGreetingMessage2 = "\nAccording to CMM Guidelines, your medical needs share request amount does not exceed the program’s Personal Responsibility. " +
-                                                      "Therefore, we are not able to share your medical needs.";
+                                                      "In addition, there are some medical bills that are not eligible for sharing (CMM Guidelines, Section XII. Eligible / Ineligible / " +
+                                                      "Advance Notice, B. Ineligible Medical Bills for Sharing).";
+
+        //private String strEnglishPRGreetingMessage2 = "\nAccording to CMM Guidelines, your medical needs share request amount does not exceed the level’s Personal Responsibility. " +
+        //                                              "Therefore, we are not able to share your medical needs.";
+
+        private String strEnglishPRGreetingMessage2 = "According to CMM Guidelines, your medical expenses that are sharable were applied to your Personal Responsibility amount, or " +
+                                                      "the medical bills are not sharable for the reasons listed below.";
+
         private String strEnglishPRGreetingMessage3 = "Should you have any questions regarding this, please contact the Needs Processing Department at 773-777-8889, Monday through Friday, " +
                                                       "from 9:00 AM to 5:30 PM, CST.";
 
@@ -376,7 +388,9 @@ namespace BlueSheetApp
                                                        "c4g_Incident__r.c4g_Contact__r.LastName, " +
                                                        "c4g_Incident__r.c4g_Contact__r.MiddleName, " +
                                                        "c4g_Incident__r.c4g_Contact__r.FirstName, " +
-                                                       "c4g_Incident__r.c4g_Contact__r.Individual_ID__c " +
+                                                       "c4g_Incident__r.c4g_Contact__r.Individual_ID__c, " +
+                                                       //"c4g_Incident__r.c4g_Contact__r.c4g_Plan__r.Name " +
+                                                       "c4g_Incident__r.Incident_Program__c " +
                                                        "from Medical_Bill__c where " +
                                                        "c4g_Incident__r.c4g_Contact__r.Individual_ID__c like '%" + strIndividualID + "'";
 
@@ -391,6 +405,8 @@ namespace BlueSheetApp
                             strIndividualMiddleName = medbillIndInfo.c4g_Incident__r.c4g_Contact__r.MiddleName;
                             strIndiviaualFirstName = medbillIndInfo.c4g_Incident__r.c4g_Contact__r.FirstName;
                             strIndividualID = medbillIndInfo.c4g_Incident__r.c4g_Contact__r.Individual_ID__c;
+                            //strProgram = medbillIndInfo.c4g_Incident__r.c4g_Contact__r.c4g_Plan__r.Name;
+                            strProgram = medbillIndInfo.c4g_Incident__r.Incident_Program__c;
                             //strStreetAddress = medbillIndInfo.c4g_Incident__r.c4g_Contact__r.OtherAddress.street;
                             //strCity = medbillIndInfo.c4g_Incident__r.c4g_Contact__r.OtherAddress.city;
                             //strState = medbillIndInfo.c4g_Incident__r.c4g_Contact__r.OtherAddress.state;
@@ -398,7 +414,7 @@ namespace BlueSheetApp
                             strStreetAddress = medbillIndInfo.c4g_Incident__r.c4g_Contact__r.Account.ShippingAddress.street;
                             strCity = medbillIndInfo.c4g_Incident__r.c4g_Contact__r.Account.ShippingAddress.city;
                             strState = medbillIndInfo.c4g_Incident__r.c4g_Contact__r.Account.ShippingAddress.state;
-                            strZip = medbillIndInfo.c4g_Incident__r.c4g_Contact__r.Account.ShippingAddress.postalCode;
+                            strZip = medbillIndInfo.c4g_Incident__r.c4g_Contact__r.Account.ShippingAddress.postalCode;                     
 
                         }
 
@@ -5458,106 +5474,106 @@ namespace BlueSheetApp
                 /// Program personal responsibility table
                 /// 
 
-                MigraDocDOM.Tables.Table tableProgramPRGuide = new MigraDocDOM.Tables.Table();
-                tableProgramPRGuide.Borders.Width = 0.1;
-                tableProgramPRGuide.Borders.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //MigraDocDOM.Tables.Table tableProgramPRGuide = new MigraDocDOM.Tables.Table();
+                //tableProgramPRGuide.Borders.Width = 0.1;
+                //tableProgramPRGuide.Borders.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
-                MigraDocDOM.Tables.Column colProgram = tableProgramPRGuide.AddColumn(MigraDocDOM.Unit.FromInch(2));
-                colProgram.Format.Alignment = ParagraphAlignment.Left;
-                MigraDocDOM.Tables.Column colPersonalResponsibility = tableProgramPRGuide.AddColumn(MigraDocDOM.Unit.FromInch(4.8));
-                colPersonalResponsibility.Format.Alignment = ParagraphAlignment.Left;
+                //MigraDocDOM.Tables.Column colProgram = tableProgramPRGuide.AddColumn(MigraDocDOM.Unit.FromInch(2));
+                //colProgram.Format.Alignment = ParagraphAlignment.Left;
+                //MigraDocDOM.Tables.Column colPersonalResponsibility = tableProgramPRGuide.AddColumn(MigraDocDOM.Unit.FromInch(4.8));
+                //colPersonalResponsibility.Format.Alignment = ParagraphAlignment.Left;
 
-                MigraDocDOM.Tables.Row rowHeader = tableProgramPRGuide.AddRow();
-                rowHeader.Height = "0.2in";
-                rowHeader.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
+                //MigraDocDOM.Tables.Row rowHeader = tableProgramPRGuide.AddRow();
+                //rowHeader.Height = "0.2in";
+                //rowHeader.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
 
-                MigraDocDOM.Tables.Cell cellProgramHeader = rowHeader.Cells[0];
-                cellProgramHeader.Format.Font.Bold = true;
-                cellProgramHeader.Format.Font.Size = 8;
-                cellProgramHeader.Format.Font.Name = "Malgun Gothic";
-                cellProgramHeader.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellProgramHeader.AddParagraph("레벨");
+                //MigraDocDOM.Tables.Cell cellProgramHeader = rowHeader.Cells[0];
+                //cellProgramHeader.Format.Font.Bold = true;
+                //cellProgramHeader.Format.Font.Size = 8;
+                //cellProgramHeader.Format.Font.Name = "Malgun Gothic";
+                //cellProgramHeader.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellProgramHeader.AddParagraph("레벨");
 
-                MigraDocDOM.Tables.Cell cellPersonalResponsibility = rowHeader.Cells[1];
-                cellPersonalResponsibility.Format.Font.Bold = true;
-                cellPersonalResponsibility.Format.Font.Size = 8;
-                cellPersonalResponsibility.Format.Font.Name = "Malgun Gothic";
-                cellPersonalResponsibility.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellPersonalResponsibility.AddParagraph("본인부담금");
+                //MigraDocDOM.Tables.Cell cellPersonalResponsibility = rowHeader.Cells[1];
+                //cellPersonalResponsibility.Format.Font.Bold = true;
+                //cellPersonalResponsibility.Format.Font.Size = 8;
+                //cellPersonalResponsibility.Format.Font.Name = "Malgun Gothic";
+                //cellPersonalResponsibility.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellPersonalResponsibility.AddParagraph("본인부담금");
 
-                MigraDocDOM.Tables.Row rowBronze = tableProgramPRGuide.AddRow();
-                rowBronze.Height = "0.2in";
-                rowBronze.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
+                //MigraDocDOM.Tables.Row rowBronze = tableProgramPRGuide.AddRow();
+                //rowBronze.Height = "0.2in";
+                //rowBronze.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
 
-                MigraDocDOM.Tables.Cell cellBronze = rowBronze.Cells[0];
-                cellBronze.Format.Font.Bold = false;
-                cellBronze.Format.Font.Size = 8;
-                cellBronze.Format.Font.Name = "Malgun Gothic";
-                cellBronze.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellBronze.AddParagraph("브론즈 Bronze");
+                //MigraDocDOM.Tables.Cell cellBronze = rowBronze.Cells[0];
+                //cellBronze.Format.Font.Bold = false;
+                //cellBronze.Format.Font.Size = 8;
+                //cellBronze.Format.Font.Name = "Malgun Gothic";
+                //cellBronze.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellBronze.AddParagraph("브론즈 Bronze");
 
-                MigraDocDOM.Tables.Cell cellBronzePR = rowBronze.Cells[1];
-                cellBronzePR.Format.Font.Bold = false;
-                cellBronzePR.Format.Font.Size = 8;
-                cellBronzePR.Format.Font.Name = "Malgun Gothic";
-                cellBronzePR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellBronzePR.AddParagraph("$5,000 Per Incident");
+                //MigraDocDOM.Tables.Cell cellBronzePR = rowBronze.Cells[1];
+                //cellBronzePR.Format.Font.Bold = false;
+                //cellBronzePR.Format.Font.Size = 8;
+                //cellBronzePR.Format.Font.Name = "Malgun Gothic";
+                //cellBronzePR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellBronzePR.AddParagraph("$5,000 Per Incident");
 
-                MigraDocDOM.Tables.Row rowSilver = tableProgramPRGuide.AddRow();
-                rowSilver.Height = "0.2in";
-                rowSilver.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
+                //MigraDocDOM.Tables.Row rowSilver = tableProgramPRGuide.AddRow();
+                //rowSilver.Height = "0.2in";
+                //rowSilver.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
 
-                MigraDocDOM.Tables.Cell cellSilver = rowSilver.Cells[0];
-                cellSilver.Format.Font.Bold = false;
-                cellSilver.Format.Font.Size = 8;
-                cellSilver.Format.Font.Name = "Malgun Gothic";
-                cellSilver.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellSilver.AddParagraph("실버 Silver");
+                //MigraDocDOM.Tables.Cell cellSilver = rowSilver.Cells[0];
+                //cellSilver.Format.Font.Bold = false;
+                //cellSilver.Format.Font.Size = 8;
+                //cellSilver.Format.Font.Name = "Malgun Gothic";
+                //cellSilver.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellSilver.AddParagraph("실버 Silver");
 
-                MigraDocDOM.Tables.Cell cellSilverPR = rowSilver.Cells[1];
-                cellSilverPR.Format.Font.Bold = false;
-                cellSilverPR.Format.Font.Size = 8;
-                cellSilverPR.Format.Font.Name = "Malgun Gothic";
-                cellSilverPR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellSilverPR.AddParagraph("$1,000 Per Incident");
+                //MigraDocDOM.Tables.Cell cellSilverPR = rowSilver.Cells[1];
+                //cellSilverPR.Format.Font.Bold = false;
+                //cellSilverPR.Format.Font.Size = 8;
+                //cellSilverPR.Format.Font.Name = "Malgun Gothic";
+                //cellSilverPR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellSilverPR.AddParagraph("$1,000 Per Incident");
 
-                MigraDocDOM.Tables.Row rowGold = tableProgramPRGuide.AddRow();
-                rowGold.Height = "0.2in";
-                rowGold.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
+                //MigraDocDOM.Tables.Row rowGold = tableProgramPRGuide.AddRow();
+                //rowGold.Height = "0.2in";
+                //rowGold.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
 
-                MigraDocDOM.Tables.Cell cellGold = rowGold.Cells[0];
-                cellGold.Format.Font.Bold = false;
-                cellGold.Format.Font.Size = 8;
-                cellGold.Format.Font.Name = "Malgun Gothic";
-                cellGold.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellGold.AddParagraph("골드 Gold");
+                //MigraDocDOM.Tables.Cell cellGold = rowGold.Cells[0];
+                //cellGold.Format.Font.Bold = false;
+                //cellGold.Format.Font.Size = 8;
+                //cellGold.Format.Font.Name = "Malgun Gothic";
+                //cellGold.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellGold.AddParagraph("골드 Gold");
 
-                MigraDocDOM.Tables.Cell cellGoldPR = rowGold.Cells[1];
-                cellGoldPR.Format.Font.Bold = false;
-                cellGoldPR.Format.Font.Size = 8;
-                cellGoldPR.Format.Font.Name = "Malgun Gothic";
-                cellGoldPR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellGoldPR.AddParagraph("$500 Per Incident");
+                //MigraDocDOM.Tables.Cell cellGoldPR = rowGold.Cells[1];
+                //cellGoldPR.Format.Font.Bold = false;
+                //cellGoldPR.Format.Font.Size = 8;
+                //cellGoldPR.Format.Font.Name = "Malgun Gothic";
+                //cellGoldPR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellGoldPR.AddParagraph("$500 Per Incident");
 
-                MigraDocDOM.Tables.Row rowGoldPlus = tableProgramPRGuide.AddRow();
-                rowGoldPlus.Height = "0.2in";
-                rowGoldPlus.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
+                //MigraDocDOM.Tables.Row rowGoldPlus = tableProgramPRGuide.AddRow();
+                //rowGoldPlus.Height = "0.2in";
+                //rowGoldPlus.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
 
-                MigraDocDOM.Tables.Cell cellGoldPlus = rowGoldPlus.Cells[0];
-                cellGoldPlus.Format.Font.Bold = false;
-                cellGoldPlus.Format.Font.Size = 8;
-                cellGoldPlus.Format.Font.Name = "Malgun Gothic";
-                cellGoldPlus.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellGoldPlus.AddParagraph("골드플러스 Gold Plus");
+                //MigraDocDOM.Tables.Cell cellGoldPlus = rowGoldPlus.Cells[0];
+                //cellGoldPlus.Format.Font.Bold = false;
+                //cellGoldPlus.Format.Font.Size = 8;
+                //cellGoldPlus.Format.Font.Name = "Malgun Gothic";
+                //cellGoldPlus.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellGoldPlus.AddParagraph("골드플러스 Gold Plus");
 
-                MigraDocDOM.Tables.Cell cellGoldPlusPR = rowGoldPlus.Cells[1];
-                cellGoldPlusPR.Format.Font.Bold = false;
-                cellGoldPlusPR.Format.Font.Size = 8;
-                cellGoldPlusPR.Format.Font.Name = "Malgun Gothic";
-                cellGoldPlusPR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellGoldPlusPR.AddParagraph("$500 Per Membership Anniversary");
+                //MigraDocDOM.Tables.Cell cellGoldPlusPR = rowGoldPlus.Cells[1];
+                //cellGoldPlusPR.Format.Font.Bold = false;
+                //cellGoldPlusPR.Format.Font.Size = 8;
+                //cellGoldPlusPR.Format.Font.Name = "Malgun Gothic";
+                //cellGoldPlusPR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellGoldPlusPR.AddParagraph("$500 Per Membership Anniversary");
 
-                pdfPersonalResponsibilityDoc.LastSection.Add(tableProgramPRGuide);
+                //pdfPersonalResponsibilityDoc.LastSection.Add(tableProgramPRGuide);
 
                 Paragraph paraPRGreetingMessage4 = section.AddParagraph();
                 paraPRGreetingMessage4.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
@@ -5640,7 +5656,6 @@ namespace BlueSheetApp
                 paraPersonalResponsibilityTotal.Format.Font.Bold = true;
                 paraPersonalResponsibilityTotal.Format.Alignment = ParagraphAlignment.Left;
                 paraPersonalResponsibilityTotal.Format.SpaceBefore = "0.2in";
-                //paraPersonalResponsibilityTotal.Format.SpaceAfter = "0.2in";
 
                 paraPersonalResponsibilityTotal.AddFormattedText("Incident Occurrence Date: " + PersonalResponsibilityTotalEntered.IncidentOccurrenceDate.Value.ToString("MM/dd/yyyy"));
 
@@ -5652,11 +5667,31 @@ namespace BlueSheetApp
                 paraINCDNumber.Format.Alignment = ParagraphAlignment.Left;
                 paraINCDNumber.Format.SpaceBefore = "0.05in";
 
-                paraINCDNumber.AddFormattedText(PersonalResponsibilityTotalEntered.IncidentNo + ": " + PersonalResponsibilityTotalEntered.ICD10CodeDescription);
+                //paraINCDNumber.AddFormattedText(PersonalResponsibilityTotalEntered.IncidentNo + ": " + PersonalResponsibilityTotalEntered.ICD10CodeDescription);
 
                 //paraINCDNumber.AddFormattedText(PersonalResponsibilityTotalEntered.IncidentNo + ": " + PersonalResponsibilityTotalEntered.)
 
-
+                switch (strProgram)
+                {
+                    case "Gold Plus":
+                    case "Gold Medi-I":
+                    case "Gold Medi-II":
+                        paraINCDNumber.AddFormattedText(PersonalResponsibilityTotalEntered.IncidentNo + ": " + PersonalResponsibilityTotalEntered.ICD10CodeDescription +
+                                                    " | Level: " + strProgram + " (Personal Responsibility: $500 per Anniversary)");
+                        break;
+                    case "Gold":
+                        paraINCDNumber.AddFormattedText(PersonalResponsibilityTotalEntered.IncidentNo + ": " + PersonalResponsibilityTotalEntered.ICD10CodeDescription +
+                                                    " | Level: " + strProgram + " (Personal Responsibility: $500 per Incident)");
+                        break;
+                    case "Silver":
+                        paraINCDNumber.AddFormattedText(PersonalResponsibilityTotalEntered.IncidentNo + ": " + PersonalResponsibilityTotalEntered.ICD10CodeDescription +
+                                                    " | Level: " + strProgram + " (Personal Responsibility: $1,000 per Incident)");
+                        break;
+                    case "Bronze":
+                        paraINCDNumber.AddFormattedText(PersonalResponsibilityTotalEntered.IncidentNo + ": " + PersonalResponsibilityTotalEntered.ICD10CodeDescription +
+                                                    " | Level: " + strProgram + " (Personal Responsibility: $5,000 per Incident)");
+                        break;
+                }
 
                 //paraPersonalResponsibilityTotal.AddFormattedText("Incident Occurrence Date: " + PersonalResponsibilityTotalEntered.IncidentOccurrenceDate.Value.ToString("MM/dd/yyyy") + "\t" +
                 //                                 "Personal Responsibility Total: " + PersonalResponsibilityTotalEntered.PersonalResponsibilityTotal.ToString("C"));
@@ -6219,7 +6254,7 @@ namespace BlueSheetApp
                 //frmDocReceivedDate frmDocumentReceivedDate = new frmDocReceivedDate();
 
                 //frmDocumentReceivedDate.StartPosition = FormStartPosition.CenterParent;
-                
+
                 //var dlgResultDocReceivedDate = frmDocumentReceivedDate.ShowDialog();
 
                 //if (dlgResultDocReceivedDate == DialogResult.OK)
@@ -6972,7 +7007,7 @@ namespace BlueSheetApp
                             cell.Format.Font.Size = 7;
                             cell.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(0, 100, 100, 0);
                             cell.Format.Alignment = ParagraphAlignment.Right;
-                            
+
                             cell = rowData.Cells[10];
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].Balance);
                             cell.Format.Font.Bold = true;
@@ -7855,7 +7890,7 @@ namespace BlueSheetApp
                 for (int nRow = 0; nRow < gvIneligible.RowCount; nRow++)
                 {
                     if (gvIneligible[4, nRow].Value.ToString() != "")
-                        //(DateTime.Parse(gvIneligible[4, nRow].Value.ToString()) > dtDocReceivedDate.Value))
+                    //(DateTime.Parse(gvIneligible[4, nRow].Value.ToString()) > dtDocReceivedDate.Value))
                     {
                         BillIneligibleTableRow ineligibleRow = new BillIneligibleTableRow();
                         ineligibleRow.PatientName = gvIneligible[1, nRow].Value.ToString();
@@ -8226,7 +8261,7 @@ namespace BlueSheetApp
 
                             System.Diagnostics.Process.Start(processInfo);
                         }
-                        catch(IOException ex)
+                        catch (IOException ex)
                         {
                             MessageBox.Show(ex.Message, "Error");
                             return;
@@ -8251,7 +8286,7 @@ namespace BlueSheetApp
 
                             System.Diagnostics.Process.Start(processInfo);
                         }
-                        catch(IOException ex)
+                        catch (IOException ex)
                         {
                             MessageBox.Show(ex.Message, "Error");
                             return;
@@ -8265,7 +8300,7 @@ namespace BlueSheetApp
                 //}
 
             }
-            else if ((gvPersonalResponsibility.Rows.Count > 0)||(gvIneligibleNoSharing.Rows.Count > 0))
+            else if ((gvPersonalResponsibility.Rows.Count > 0) || (gvIneligibleNoSharing.Rows.Count > 0))
             {
 
                 List<PersonalResponsibilityInfo> lstPersonalResponsibilityInfo = new List<PersonalResponsibilityInfo>();
@@ -8401,106 +8436,106 @@ namespace BlueSheetApp
                 /// Program personal responsibility table
                 /// 
 
-                MigraDocDOM.Tables.Table tableProgramPRGuide = new MigraDocDOM.Tables.Table();
-                tableProgramPRGuide.Borders.Width = 0.1;
-                tableProgramPRGuide.Borders.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //MigraDocDOM.Tables.Table tableProgramPRGuide = new MigraDocDOM.Tables.Table();
+                //tableProgramPRGuide.Borders.Width = 0.1;
+                //tableProgramPRGuide.Borders.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
-                MigraDocDOM.Tables.Column colProgram = tableProgramPRGuide.AddColumn(MigraDocDOM.Unit.FromInch(2));
-                colProgram.Format.Alignment = ParagraphAlignment.Left;
-                MigraDocDOM.Tables.Column colPersonalResponsibility = tableProgramPRGuide.AddColumn(MigraDocDOM.Unit.FromInch(4.8));
-                colPersonalResponsibility.Format.Alignment = ParagraphAlignment.Left;
+                //MigraDocDOM.Tables.Column colProgram = tableProgramPRGuide.AddColumn(MigraDocDOM.Unit.FromInch(2));
+                //colProgram.Format.Alignment = ParagraphAlignment.Left;
+                //MigraDocDOM.Tables.Column colPersonalResponsibility = tableProgramPRGuide.AddColumn(MigraDocDOM.Unit.FromInch(4.8));
+                //colPersonalResponsibility.Format.Alignment = ParagraphAlignment.Left;
 
-                MigraDocDOM.Tables.Row rowHeader = tableProgramPRGuide.AddRow();
-                rowHeader.Height = "0.2in";
-                rowHeader.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
+                //MigraDocDOM.Tables.Row rowHeader = tableProgramPRGuide.AddRow();
+                //rowHeader.Height = "0.2in";
+                //rowHeader.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
 
-                MigraDocDOM.Tables.Cell cellProgramHeader = rowHeader.Cells[0];
-                cellProgramHeader.Format.Font.Bold = true;
-                cellProgramHeader.Format.Font.Size = 8;
-                cellProgramHeader.Format.Font.Name = "Arial";
-                cellProgramHeader.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellProgramHeader.AddParagraph("Program");
+                //MigraDocDOM.Tables.Cell cellProgramHeader = rowHeader.Cells[0];
+                //cellProgramHeader.Format.Font.Bold = true;
+                //cellProgramHeader.Format.Font.Size = 8;
+                //cellProgramHeader.Format.Font.Name = "Arial";
+                //cellProgramHeader.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellProgramHeader.AddParagraph("Level");
 
-                MigraDocDOM.Tables.Cell cellPersonalResponsibility = rowHeader.Cells[1];
-                cellPersonalResponsibility.Format.Font.Bold = true;
-                cellPersonalResponsibility.Format.Font.Size = 8;
-                cellPersonalResponsibility.Format.Font.Name = "Arial";
-                cellPersonalResponsibility.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellPersonalResponsibility.AddParagraph("Personal Responsibility Amount");
+                //MigraDocDOM.Tables.Cell cellPersonalResponsibility = rowHeader.Cells[1];
+                //cellPersonalResponsibility.Format.Font.Bold = true;
+                //cellPersonalResponsibility.Format.Font.Size = 8;
+                //cellPersonalResponsibility.Format.Font.Name = "Arial";
+                //cellPersonalResponsibility.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellPersonalResponsibility.AddParagraph("Personal Responsibility Amount");
 
-                MigraDocDOM.Tables.Row rowBronze = tableProgramPRGuide.AddRow();
-                rowBronze.Height = "0.2in";
-                rowBronze.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
+                //MigraDocDOM.Tables.Row rowBronze = tableProgramPRGuide.AddRow();
+                //rowBronze.Height = "0.2in";
+                //rowBronze.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
 
-                MigraDocDOM.Tables.Cell cellBronze = rowBronze.Cells[0];
-                cellBronze.Format.Font.Bold = false;
-                cellBronze.Format.Font.Size = 8;
-                cellBronze.Format.Font.Name = "Arial";
-                cellBronze.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellBronze.AddParagraph("Bronze");
+                //MigraDocDOM.Tables.Cell cellBronze = rowBronze.Cells[0];
+                //cellBronze.Format.Font.Bold = false;
+                //cellBronze.Format.Font.Size = 8;
+                //cellBronze.Format.Font.Name = "Arial";
+                //cellBronze.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellBronze.AddParagraph("Bronze");
 
-                MigraDocDOM.Tables.Cell cellBronzePR = rowBronze.Cells[1];
-                cellBronzePR.Format.Font.Bold = false;
-                cellBronzePR.Format.Font.Size = 8;
-                cellBronzePR.Format.Font.Name = "Arial";
-                cellBronzePR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellBronzePR.AddParagraph("$5,000 Per Incident");
+                //MigraDocDOM.Tables.Cell cellBronzePR = rowBronze.Cells[1];
+                //cellBronzePR.Format.Font.Bold = false;
+                //cellBronzePR.Format.Font.Size = 8;
+                //cellBronzePR.Format.Font.Name = "Arial";
+                //cellBronzePR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellBronzePR.AddParagraph("$5,000 Per Incident");
 
-                MigraDocDOM.Tables.Row rowSilver = tableProgramPRGuide.AddRow();
-                rowSilver.Height = "0.2in";
-                rowSilver.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
+                //MigraDocDOM.Tables.Row rowSilver = tableProgramPRGuide.AddRow();
+                //rowSilver.Height = "0.2in";
+                //rowSilver.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
 
-                MigraDocDOM.Tables.Cell cellSilver = rowSilver.Cells[0];
-                cellSilver.Format.Font.Bold = false;
-                cellSilver.Format.Font.Size = 8;
-                cellSilver.Format.Font.Name = "Arial";
-                cellSilver.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellSilver.AddParagraph("Silver");
+                //MigraDocDOM.Tables.Cell cellSilver = rowSilver.Cells[0];
+                //cellSilver.Format.Font.Bold = false;
+                //cellSilver.Format.Font.Size = 8;
+                //cellSilver.Format.Font.Name = "Arial";
+                //cellSilver.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellSilver.AddParagraph("Silver");
 
-                MigraDocDOM.Tables.Cell cellSilverPR = rowSilver.Cells[1];
-                cellSilverPR.Format.Font.Bold = false;
-                cellSilverPR.Format.Font.Size = 8;
-                cellSilverPR.Format.Font.Name = "Arial";
-                cellSilverPR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellSilverPR.AddParagraph("$1,000 Per Incident");
+                //MigraDocDOM.Tables.Cell cellSilverPR = rowSilver.Cells[1];
+                //cellSilverPR.Format.Font.Bold = false;
+                //cellSilverPR.Format.Font.Size = 8;
+                //cellSilverPR.Format.Font.Name = "Arial";
+                //cellSilverPR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellSilverPR.AddParagraph("$1,000 Per Incident");
 
-                MigraDocDOM.Tables.Row rowGold = tableProgramPRGuide.AddRow();
-                rowGold.Height = "0.2in";
-                rowGold.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
+                //MigraDocDOM.Tables.Row rowGold = tableProgramPRGuide.AddRow();
+                //rowGold.Height = "0.2in";
+                //rowGold.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
 
-                MigraDocDOM.Tables.Cell cellGold = rowGold.Cells[0];
-                cellGold.Format.Font.Bold = false;
-                cellGold.Format.Font.Size = 8;
-                cellGold.Format.Font.Name = "Arial";
-                cellGold.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellGold.AddParagraph("Gold");
+                //MigraDocDOM.Tables.Cell cellGold = rowGold.Cells[0];
+                //cellGold.Format.Font.Bold = false;
+                //cellGold.Format.Font.Size = 8;
+                //cellGold.Format.Font.Name = "Arial";
+                //cellGold.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellGold.AddParagraph("Gold");
 
-                MigraDocDOM.Tables.Cell cellGoldPR = rowGold.Cells[1];
-                cellGoldPR.Format.Font.Bold = false;
-                cellGoldPR.Format.Font.Size = 8;
-                cellGoldPR.Format.Font.Name = "Arial";
-                cellGoldPR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellGoldPR.AddParagraph("$500 Per Incident");
+                //MigraDocDOM.Tables.Cell cellGoldPR = rowGold.Cells[1];
+                //cellGoldPR.Format.Font.Bold = false;
+                //cellGoldPR.Format.Font.Size = 8;
+                //cellGoldPR.Format.Font.Name = "Arial";
+                //cellGoldPR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellGoldPR.AddParagraph("$500 Per Incident");
 
-                MigraDocDOM.Tables.Row rowGoldPlus = tableProgramPRGuide.AddRow();
-                rowGoldPlus.Height = "0.2in";
-                rowGoldPlus.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
+                //MigraDocDOM.Tables.Row rowGoldPlus = tableProgramPRGuide.AddRow();
+                //rowGoldPlus.Height = "0.2in";
+                //rowGoldPlus.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
 
-                MigraDocDOM.Tables.Cell cellGoldPlus = rowGoldPlus.Cells[0];
-                cellGoldPlus.Format.Font.Bold = false;
-                cellGoldPlus.Format.Font.Size = 8;
-                cellGoldPlus.Format.Font.Name = "Arial";
-                cellGoldPlus.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellGoldPlus.AddParagraph("Gold Plus");
+                //MigraDocDOM.Tables.Cell cellGoldPlus = rowGoldPlus.Cells[0];
+                //cellGoldPlus.Format.Font.Bold = false;
+                //cellGoldPlus.Format.Font.Size = 8;
+                //cellGoldPlus.Format.Font.Name = "Arial";
+                //cellGoldPlus.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellGoldPlus.AddParagraph("Gold Plus");
 
-                MigraDocDOM.Tables.Cell cellGoldPlusPR = rowGoldPlus.Cells[1];
-                cellGoldPlusPR.Format.Font.Bold = false;
-                cellGoldPlusPR.Format.Font.Size = 8;
-                cellGoldPlusPR.Format.Font.Name = "Arial";
-                cellGoldPlusPR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                cellGoldPlusPR.AddParagraph("$500 Per Membership Anniversary");
+                //MigraDocDOM.Tables.Cell cellGoldPlusPR = rowGoldPlus.Cells[1];
+                //cellGoldPlusPR.Format.Font.Bold = false;
+                //cellGoldPlusPR.Format.Font.Size = 8;
+                //cellGoldPlusPR.Format.Font.Name = "Arial";
+                //cellGoldPlusPR.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //cellGoldPlusPR.AddParagraph("$500 Per Membership Anniversary");
 
-                pdfPersonalResponsibilityDoc.LastSection.Add(tableProgramPRGuide);
+                //pdfPersonalResponsibilityDoc.LastSection.Add(tableProgramPRGuide);
 
 
                 Paragraph paraPRGreetingMessage2 = section.AddParagraph();
@@ -8616,6 +8651,20 @@ namespace BlueSheetApp
 
                 paraNPStatement.AddFormattedText("Needs Processing Statement\n", TextFormat.Bold);
 
+                //Paragraph paraPersonalResponsibilityTotal = section.AddParagraph();
+                //paraPersonalResponsibilityTotal.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
+                //paraPersonalResponsibilityTotal.Format.Font.Name = "Arial";
+                //paraPersonalResponsibilityTotal.Format.Font.Size = 8;
+                //paraPersonalResponsibilityTotal.Format.Font.Bold = true;
+                //paraPersonalResponsibilityTotal.Format.Alignment = ParagraphAlignment.Left;
+                //paraPersonalResponsibilityTotal.Format.SpaceBefore = "0.2in";
+                //paraPersonalResponsibilityTotal.Format.SpaceAfter = "0.2in";
+
+                //paraPersonalResponsibilityTotal.AddFormattedText("Incident Occurrence Date: " + PersonalResponsibilityTotalEntered.IncidentOccurrenceDate.Value.ToString("MM/dd/yyyy") + "\t" +
+                //                                                 "Personal Responsibility Total: " + PersonalResponsibilityTotalEntered.PersonalResponsibilityTotal.ToString("C"));
+
+                //paraPersonalResponsibilityTotal.AddFormattedText("Incident Occurrence Date: " + PersonalResponsibilityTotalEntered.IncidentOccurrenceDate.Value.ToString("MM/dd/yyyy"));
+
                 Paragraph paraPersonalResponsibilityTotal = section.AddParagraph();
                 paraPersonalResponsibilityTotal.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                 paraPersonalResponsibilityTotal.Format.Font.Name = "Arial";
@@ -8623,12 +8672,9 @@ namespace BlueSheetApp
                 paraPersonalResponsibilityTotal.Format.Font.Bold = true;
                 paraPersonalResponsibilityTotal.Format.Alignment = ParagraphAlignment.Left;
                 paraPersonalResponsibilityTotal.Format.SpaceBefore = "0.2in";
-                //paraPersonalResponsibilityTotal.Format.SpaceAfter = "0.2in";
-
-                //paraPersonalResponsibilityTotal.AddFormattedText("Incident Occurrence Date: " + PersonalResponsibilityTotalEntered.IncidentOccurrenceDate.Value.ToString("MM/dd/yyyy") + "\t" +
-                //                                                 "Personal Responsibility Total: " + PersonalResponsibilityTotalEntered.PersonalResponsibilityTotal.ToString("C"));
 
                 paraPersonalResponsibilityTotal.AddFormattedText("Incident Occurrence Date: " + PersonalResponsibilityTotalEntered.IncidentOccurrenceDate.Value.ToString("MM/dd/yyyy"));
+
 
                 Paragraph paraINCDNumber = section.AddParagraph();
                 paraINCDNumber.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
@@ -8639,8 +8685,32 @@ namespace BlueSheetApp
                 paraINCDNumber.Format.SpaceBefore = "0.05in";
                 paraINCDNumber.Format.SpaceAfter = "0.15in";
 
-                paraINCDNumber.AddFormattedText(PersonalResponsibilityTotalEntered.IncidentNo + ": " + PersonalResponsibilityTotalEntered.ICD10CodeDescription);
+                //if (strProgram == "Gold Plus")
+                //{
+                switch (strProgram)
+                {
+                    case "Gold Plus":
+                    case "Gold Medi-I":
+                    case "Gold Medi-II":
+                        paraINCDNumber.AddFormattedText(PersonalResponsibilityTotalEntered.IncidentNo + ": " + PersonalResponsibilityTotalEntered.ICD10CodeDescription +
+                                                    " | Level: " + strProgram + " (Personal Responsibility: $500 per Anniversary)");
+                        break;
+                    case "Gold":
+                        paraINCDNumber.AddFormattedText(PersonalResponsibilityTotalEntered.IncidentNo + ": " + PersonalResponsibilityTotalEntered.ICD10CodeDescription +
+                                                    " | Level: " + strProgram + " (Personal Responsibility: $500 per Incident)");
+                        break;
+                    case "Silver":
+                        paraINCDNumber.AddFormattedText(PersonalResponsibilityTotalEntered.IncidentNo + ": " + PersonalResponsibilityTotalEntered.ICD10CodeDescription +
+                                                    " | Level: " + strProgram + " (Personal Responsibility: $1,000 per Incident)");
+                        break;
+                    case "Bronze":
+                        paraINCDNumber.AddFormattedText(PersonalResponsibilityTotalEntered.IncidentNo + ": " + PersonalResponsibilityTotalEntered.ICD10CodeDescription +
+                                                    " | Level: " + strProgram + " (Personal Responsibility: $5,000 per Incident)");
+                        break;                  
+                }
+                //}
 
+                
                 //Paragraph paraIncidentInfo = section.AddParagraph();
                 //paraIncidentInfo.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                 //paraIncidentInfo.Format.Font.Name = "Arial";
