@@ -75,6 +75,8 @@
             this.gvIneligibleInTab = new System.Windows.Forms.DataGridView();
             this.label16 = new System.Windows.Forms.Label();
             this.tabPersonalResponsibility = new System.Windows.Forms.TabPage();
+            this.gvIneligibleNoSharing = new System.Windows.Forms.DataGridView();
+            this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.gvPersonalResponsibility = new System.Windows.Forms.DataGridView();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -84,8 +86,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.txtIncidentNo = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.gvIneligibleNoSharing = new System.Windows.Forms.DataGridView();
             this.grpPaymentMethod.SuspendLayout();
             this.grpPaymentInfo.SuspendLayout();
             this.tabMedicalExpense.SuspendLayout();
@@ -104,8 +104,8 @@
             this.tabIneligible.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvIneligibleInTab)).BeginInit();
             this.tabPersonalResponsibility.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvPersonalResponsibility)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvIneligibleNoSharing)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPersonalResponsibility)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -643,6 +643,27 @@
             this.tabPersonalResponsibility.Text = "Personal Responsibility";
             this.tabPersonalResponsibility.UseVisualStyleBackColor = true;
             // 
+            // gvIneligibleNoSharing
+            // 
+            this.gvIneligibleNoSharing.AllowUserToAddRows = false;
+            this.gvIneligibleNoSharing.AllowUserToDeleteRows = false;
+            this.gvIneligibleNoSharing.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvIneligibleNoSharing.Location = new System.Drawing.Point(20, 358);
+            this.gvIneligibleNoSharing.Name = "gvIneligibleNoSharing";
+            this.gvIneligibleNoSharing.ReadOnly = true;
+            this.gvIneligibleNoSharing.Size = new System.Drawing.Size(1748, 251);
+            this.gvIneligibleNoSharing.TabIndex = 15;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(23, 328);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(91, 16);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "지원 불가 의료비";
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -714,32 +735,11 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(1725, 32);
+            this.label19.Location = new System.Drawing.Point(1664, 34);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(111, 13);
+            this.label19.Size = new System.Drawing.Size(176, 13);
             this.label19.TabIndex = 37;
-            this.label19.Text = "BlueSheet version 1.5\r\n";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(23, 328);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(91, 16);
-            this.label20.TabIndex = 14;
-            this.label20.Text = "지원 불가 의료비";
-            // 
-            // gvIneligibleNoSharing
-            // 
-            this.gvIneligibleNoSharing.AllowUserToAddRows = false;
-            this.gvIneligibleNoSharing.AllowUserToDeleteRows = false;
-            this.gvIneligibleNoSharing.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvIneligibleNoSharing.Location = new System.Drawing.Point(20, 358);
-            this.gvIneligibleNoSharing.Name = "gvIneligibleNoSharing";
-            this.gvIneligibleNoSharing.ReadOnly = true;
-            this.gvIneligibleNoSharing.Size = new System.Drawing.Size(1748, 251);
-            this.gvIneligibleNoSharing.TabIndex = 15;
+            this.label19.Text = "BlueSheet version: New CMM Logo\r\n";
             // 
             // frmBlueSheet
             // 
@@ -789,8 +789,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvIneligibleInTab)).EndInit();
             this.tabPersonalResponsibility.ResumeLayout(false);
             this.tabPersonalResponsibility.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvPersonalResponsibility)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvIneligibleNoSharing)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPersonalResponsibility)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

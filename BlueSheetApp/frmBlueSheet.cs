@@ -3177,7 +3177,7 @@ namespace BlueSheetApp
 
                 //MigraDocDOM.Shapes.Image image = section.Headers.Primary.AddImage("C:\\Program Files (x86)\\CMM\\BlueSheet\\cmmlogo.jpg");
                 //MigraDocDOM.Shapes.Image image = section.Headers.Primary.AddImage("C:\\cmmlogo.png");
-                MigraDocDOM.Shapes.Image image = section.Headers.Primary.AddImage("C:\\Program Files (x86)\\CMM\\BlueSheet\\cmmlogo.png");
+                MigraDocDOM.Shapes.Image image = section.Headers.Primary.AddImage("C:\\Program Files (x86)\\CMM\\BlueSheet\\cmmlogo_new.png");
 
 
                 //savefileDlg.FileName = strIndividualID + "_" + strIndividualName + "_" + DateTime.Today.ToString("MM-dd-yyyy") + "_Ko";
@@ -3194,7 +3194,8 @@ namespace BlueSheetApp
                 Paragraph paraCMMAddress = section.Headers.Primary.AddParagraph();
                 paraCMMAddress.Format.Font.Name = "Arial";
                 paraCMMAddress.Format.Font.Size = 8;
-                paraCMMAddress.Format.SpaceBefore = "0.15in";
+                //paraCMMAddress.Format.SpaceBefore = "0.15in";
+                paraCMMAddress.Format.SpaceBefore = "0in";
                 paraCMMAddress.Format.SpaceAfter = "0.25in";
                 //paraCMMAddress.Format.LeftIndent = "0.5in";
                 //paraCMMAddress.Format.RightIndent = "0.5in";
@@ -5355,7 +5356,8 @@ namespace BlueSheetApp
                 section.PageSetup.DifferentFirstPageHeaderFooter = false;
                 section.Headers.Primary.Format.SpaceBefore = "0.25in";
 
-                MigraDocDOM.Shapes.Image image = section.Headers.Primary.AddImage("C:\\Program Files (x86)\\CMM\\BlueSheet\\cmmlogo.png");
+                //MigraDocDOM.Shapes.Image image = section.Headers.Primary.AddImage("C:\\Program Files (x86)\\CMM\\BlueSheet\\cmmlogo.png");
+                MigraDocDOM.Shapes.Image image = section.Headers.Primary.AddImage("C:\\Program Files (x86)\\CMM\\BlueSheet\\cmmlogo_new.png");
 
                 image.Height = "0.8in";
                 image.LockAspectRatio = true;
@@ -5368,7 +5370,8 @@ namespace BlueSheetApp
                 Paragraph paraCMMAddress = section.Headers.Primary.AddParagraph();
                 paraCMMAddress.Format.Font.Name = "Arial";
                 paraCMMAddress.Format.Font.Size = 8;
-                paraCMMAddress.Format.SpaceBefore = "0.15in";
+                //paraCMMAddress.Format.SpaceBefore = "0.15in";
+                paraCMMAddress.Format.SpaceBefore = "0in";
                 paraCMMAddress.Format.SpaceAfter = "0.25in";
                 paraCMMAddress.Format.Alignment = ParagraphAlignment.Center;
 
@@ -6279,7 +6282,7 @@ namespace BlueSheetApp
                 section.PageSetup.DifferentFirstPageHeaderFooter = false;
                 section.Headers.Primary.Format.SpaceBefore = "0.25in";
 
-                MigraDocDOM.Shapes.Image image = section.Headers.Primary.AddImage("C:\\Program Files (x86)\\CMM\\BlueSheet\\cmmlogo.png");
+                MigraDocDOM.Shapes.Image image = section.Headers.Primary.AddImage("C:\\Program Files (x86)\\CMM\\BlueSheet\\cmmlogo_new.png");
 
                 image.Height = "0.8in";
                 image.LockAspectRatio = true;
@@ -6292,7 +6295,8 @@ namespace BlueSheetApp
                 Paragraph paraCMMAddress = section.Headers.Primary.AddParagraph();
                 paraCMMAddress.Format.Font.Name = "Arial";
                 paraCMMAddress.Format.Font.Size = 8;
-                paraCMMAddress.Format.SpaceBefore = "0.15in";
+                //paraCMMAddress.Format.SpaceBefore = "0.15in";
+                paraCMMAddress.Format.SpaceBefore = "0in";
                 paraCMMAddress.Format.SpaceAfter = "0.25in";
                 //paraCMMAddress.Format.LeftIndent = "0.5in";
                 //paraCMMAddress.Format.RightIndent = "0.5in";
@@ -8334,7 +8338,8 @@ namespace BlueSheetApp
                 section.PageSetup.DifferentFirstPageHeaderFooter = false;
                 section.Headers.Primary.Format.SpaceBefore = "0.25in";
 
-                MigraDocDOM.Shapes.Image image = section.Headers.Primary.AddImage("C:\\Program Files (x86)\\CMM\\BlueSheet\\cmmlogo.png");
+                //MigraDocDOM.Shapes.Image image = section.Headers.Primary.AddImage("C:\\Program Files (x86)\\CMM\\BlueSheet\\cmmlogo.png");
+                MigraDocDOM.Shapes.Image image = section.Headers.Primary.AddImage("C:\\Program Files (x86)\\CMM\\BlueSheet\\cmmlogo_new.png");
 
                 image.Height = "0.8in";
                 image.LockAspectRatio = true;
@@ -8347,7 +8352,8 @@ namespace BlueSheetApp
                 Paragraph paraCMMAddress = section.Headers.Primary.AddParagraph();
                 paraCMMAddress.Format.Font.Name = "Arial";
                 paraCMMAddress.Format.Font.Size = 8;
-                paraCMMAddress.Format.SpaceBefore = "0.15in";
+                //paraCMMAddress.Format.SpaceBefore = "0.15in";
+                paraCMMAddress.Format.SpaceBefore = "0in";
                 paraCMMAddress.Format.SpaceAfter = "0.25in";
                 paraCMMAddress.Format.Alignment = ParagraphAlignment.Center;
 
