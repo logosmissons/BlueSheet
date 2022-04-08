@@ -136,16 +136,17 @@ namespace BlueSheetApp
         //                                              "Please see the table below for your convenience.";
 
         private String strEnglishPRGreetingMessage1 = "Christian Mutual Med-Aid(CMM) follows the Word of God.Together we share our brothers’ and sisters’ burdens as the Bible says " +
-                                                      "in Galatian 6:2. Also, the Bible states that each person must carry their own load in Galatian 6:5.\n" +
-                                                      "We define that load as Personal Responsibility (CMM Guidelines, Section VII. Needs Processing and Sharing, B. Personal Responsibility).\n" +
-                                                      "In addition, there are some medical bills that are not eligible for sharing (CMM Guidelines, Section XII. Eligible / Ineligible / " +
-                                                      "Advance Notice, B. Ineligible Medical Bills for Sharing).";
+                                                      "in Galatian 6:2. Also, the Bible states that each person must carry their own load in Galatian 6:5. " +
+                                                      "We define that load as Personal Responsibility (CMM Guidelines, Section VII. Needs Processing and Sharing, B. Personal Responsibility).";
+                                                      //"In addition, there are some medical bills that are not eligible for sharing (CMM Guidelines, Section XII. Eligible / Ineligible / " +
+                                                      //"Advance Notice, B. Ineligible Medical Bills for Sharing).";
 
         //private String strEnglishPRGreetingMessage2 = "\nAccording to CMM Guidelines, your medical needs share request amount does not exceed the level’s Personal Responsibility. " +
         //                                              "Therefore, we are not able to share your medical needs.";
 
-        private String strEnglishPRGreetingMessage2 = "According to CMM Guidelines, your medical expenses that are sharable were applied to your Personal Responsibility amount, or " +
-                                                      "the medical bills are not sharable for the reasons listed below.";
+        private String strEnglishPRGreetingMessage2 = "According to CMM Guidelines, your medical expenses do not meet the level's Personal Responsibility, " +
+                                                      "or your medical bills are not eligible for sharing.";
+                                                      //"the medical bills are not sharable for the reasons listed below.";
 
         private String strEnglishPRGreetingMessage3 = "Should you have any questions regarding this, please contact the Needs Processing Department at 773-777-8889, Monday through Friday, " +
                                                       "from 9:00 AM to 5:30 PM, CST.";
@@ -3674,7 +3675,9 @@ namespace BlueSheetApp
 
                     for (int i = 0; i < lstPaidMedicalExpenseTableRow.Count; i++)
                     {
-                        if (nRowHeight > 645) nRowHeight = 0;
+                        //if (nRowHeight > 645) nRowHeight = 0;
+                        //if (nRowHeight > 620) nRowHeight = 0;
+                        if (nRowHeight > 680) nRowHeight = 0;
                         nRowHeight += 18;
                         MigraDocDOM.Tables.Row rowData = table.AddRow();
                         rowData.VerticalAlignment = MigraDocDOM.Tables.VerticalAlignment.Center;
@@ -3986,8 +3989,12 @@ namespace BlueSheetApp
                         nHeightAfterCMMPendingPayment += 15;
                     }
 
-                    if ((nRowHeight > 645) ||
-                        (nRowHeight + nHeightAfterCMMPendingPayment) > 645)
+                    //if ((nRowHeight > 645) ||
+                    //    (nRowHeight + nHeightAfterCMMPendingPayment) > 645)
+                    //if ((nRowHeight > 620) ||
+                    //    (nRowHeight + nHeightAfterCMMPendingPayment) > 620)
+                    if ((nRowHeight > 680) ||
+                        (nRowHeight + nHeightAfterCMMPendingPayment) > 680)
                     {
                         nRowHeight = 0;
                         section.AddPageBreak();
@@ -4390,7 +4397,9 @@ namespace BlueSheetApp
                         nHeightAfterPending += 15;
                     }
 
-                    if ((nRowHeight > 645) || ((nRowHeight + nHeightAfterPending) > 645))
+                    //if ((nRowHeight > 645) || ((nRowHeight + nHeightAfterPending) > 645))
+                    //if ((nRowHeight > 620) || (nRowHeight + nHeightAfterPending > 620))
+                    if ((nRowHeight > 680) || (nRowHeight + nHeightAfterPending) > 680)
                     {
                         nRowHeight = 0;
                         section.AddPageBreak();
@@ -4911,8 +4920,12 @@ namespace BlueSheetApp
                         nHeightAfterIneligible += 15;
                     }
 
-                    if ((nRowHeight > 645) ||
-                        (nRowHeight + nHeightAfterIneligible) > 645)
+                    //if ((nRowHeight > 645) ||
+                    //    (nRowHeight + nHeightAfterIneligible) > 645)
+                    //if ((nRowHeight > 620)||
+                    //    (nRowHeight + nHeightAfterIneligible) > 620)
+                    if ((nRowHeight > 680) ||
+                        (nRowHeight + nHeightAfterIneligible) > 680)
                     {
                         nRowHeight = 0;
                         section.AddPageBreak();
