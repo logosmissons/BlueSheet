@@ -137,7 +137,7 @@ namespace BlueSheetApp
 
         private String strEnglishPRGreetingMessage1 = "Christian Mutual Med-Aid(CMM) follows the Word of God.Together we share our brothers’ and sisters’ burdens as the Bible says " +
                                                       "in Galatian 6:2. Also, the Bible states that each person must carry their own load in Galatian 6:5. " +
-                                                      "We define that load as Personal Responsibility (CMM Guidelines, Section VII. Needs Processing and Sharing, B. Personal Responsibility).";
+                                                      "We define that load as Personal Responsibility (CMM Guidelines, Section IX. C)";
                                                       //"In addition, there are some medical bills that are not eligible for sharing (CMM Guidelines, Section XII. Eligible / Ineligible / " +
                                                       //"Advance Notice, B. Ineligible Medical Bills for Sharing).";
 
@@ -156,7 +156,7 @@ namespace BlueSheetApp
 
         private String strEnglishPRGreetingMessage5 = "\n\nSincerely,";
 
-        private String strCMM_NeedProcessing = "NEEDS PROCESSING DEPARTMENT";
+        private String strCMM_NeedProcessing = "Needs Processing Department";
         //private String strNP_Phone_Fax_Email = "T.773-777-8889(EXT5003)\nF.773-777-0004 EMAIL:NPD@CMMLOGOS.ORG";
         //private String strNP_Phone_Fax_Email = "T.773-777-8889(EXT5003)\nnpd@cmmlogos.org";
         private String strNP_Phone_Fax_Email = "T.773-777-8889\nnpd@cmmlogos.org";
@@ -3353,7 +3353,7 @@ namespace BlueSheetApp
                 Paragraph paraCheckInfo = section.AddParagraph();
                 paraCheckInfo.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                 paraCheckInfo.Format.Font.Name = "Arial";
-                paraCheckInfo.Format.Font.Size = 8;
+                paraCheckInfo.Format.Font.Size = 9;
                 paraCheckInfo.Format.Font.Bold = true;
                 paraCheckInfo.Format.Alignment = ParagraphAlignment.Left;
                 paraCheckInfo.Format.SpaceBefore = "0.1in";
@@ -3390,14 +3390,14 @@ namespace BlueSheetApp
 
                     paraIncd.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                     paraIncd.Format.Font.Name = "Malgun Gothic";
-                    paraIncd.Format.Font.Size = 8;
+                    paraIncd.Format.Font.Size = 9;
                     paraIncd.Format.Font.Bold = true;
 
                     MigraDocDOM.Tables.Table tableIncd = new MigraDocDOM.Tables.Table();
                     tableIncd.Borders.Width = 0;
                     tableIncd.Borders.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
-                    MigraDocDOM.Tables.Column colINCD = tableIncd.AddColumn(MigraDocDOM.Unit.FromInch(0.85));
+                    MigraDocDOM.Tables.Column colINCD = tableIncd.AddColumn(MigraDocDOM.Unit.FromInch(1.2));
                     colINCD.Format.Alignment = ParagraphAlignment.Left;
                     //colINCD = tableIncd.AddColumn(MigraDocDOM.Unit.FromInch(1.1));
                     //colINCD.Format.Alignment = ParagraphAlignment.Left;
@@ -6370,7 +6370,7 @@ namespace BlueSheetApp
                 Paragraph paraDearMember = section.AddParagraph();
                 paraDearMember.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                 paraDearMember.Format.Font.Name = "Arial";
-                paraDearMember.Format.Font.Size = 9;
+                paraDearMember.Format.Font.Size = 10;
                 paraDearMember.Format.Alignment = ParagraphAlignment.Left;
                 //paraDearMember.Format.LeftIndent = "0.5in";
                 //paraDearMember.Format.RightIndent = "0.5in";
@@ -6384,10 +6384,10 @@ namespace BlueSheetApp
 
                 paraGreetingMessage.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                 paraGreetingMessage.Format.Font.Name = "Arial";
-                paraGreetingMessage.Format.Font.Size = 9;
+                paraGreetingMessage.Format.Font.Size = 10;
                 //paraGreetingMessage.Format.LeftIndent = "0.5in";
                 //paraGreetingMessage.Format.RightIndent = "0.5in";
-                paraGreetingMessage.Format.Alignment = ParagraphAlignment.Justify;
+                paraGreetingMessage.Format.Alignment = ParagraphAlignment.Left;
                 //paraGreetingMessage.AddFormattedText(strGreetingMessage, TextFormat.NotBold);
                 //paraGreetingMessage.AddFormattedText(strGreetingMessagePara1, TextFormat.NotBold);
                 paraGreetingMessage.AddFormattedText(strEnglishGreetingMessage1, TextFormat.NotBold);
@@ -6395,7 +6395,7 @@ namespace BlueSheetApp
                 Paragraph paraGreetingMessage2 = section.AddParagraph();
                 paraGreetingMessage2.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                 paraGreetingMessage2.Format.Font.Name = "Arial";
-                paraGreetingMessage2.Format.Font.Size = 9;
+                paraGreetingMessage2.Format.Font.Size = 10;
                 //paraGreetingMessage2.Format.LeftIndent = "0.5in";
                 //paraGreetingMessage2.Format.RightIndent = "0.5in";
                 paraGreetingMessage2.Format.Alignment = ParagraphAlignment.Left;
@@ -6405,20 +6405,20 @@ namespace BlueSheetApp
                 Paragraph paraGreetingMessage3 = section.AddParagraph();
                 paraGreetingMessage3.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                 paraGreetingMessage3.Format.Font.Name = "Arial";
-                paraGreetingMessage3.Format.Font.Size = 9;
+                paraGreetingMessage3.Format.Font.Size = 10;
                 //paraGreetingMessage3.Format.LeftIndent = "0.5in";
                 //paraGreetingMessage3.Format.RightIndent = "0.5in";
-                paraGreetingMessage3.Format.Alignment = ParagraphAlignment.Justify;
+                paraGreetingMessage3.Format.Alignment = ParagraphAlignment.Left;
                 //paraGreetingMessage3.AddFormattedText(strGreetingMessagePara3, TextFormat.NotBold);
                 paraGreetingMessage3.AddFormattedText(strEnglishGreetingMessage3, TextFormat.NotBold);
 
                 Paragraph paraGreetingMessage4 = section.AddParagraph();
                 paraGreetingMessage4.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                 paraGreetingMessage4.Format.Font.Name = "Arial";
-                paraGreetingMessage4.Format.Font.Size = 9;
+                paraGreetingMessage4.Format.Font.Size = 10;
                 //paraGreetingMessage4.Format.LeftIndent = "0.5in";
                 //paraGreetingMessage4.Format.RightIndent = "0.5in";
-                paraGreetingMessage4.Format.Alignment = ParagraphAlignment.Justify;
+                paraGreetingMessage4.Format.Alignment = ParagraphAlignment.Left;
                 //paraGreetingMessage4.AddFormattedText(strGreetingMessagePara4, TextFormat.NotBold);
                 paraGreetingMessage4.AddFormattedText(strEnglishGreetingMessage4, TextFormat.NotBold);
 
@@ -6428,7 +6428,7 @@ namespace BlueSheetApp
 
                 paraNeedsProcessing.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                 paraNeedsProcessing.Format.Font.Name = "Arial";
-                paraNeedsProcessing.Format.Font.Size = 9;
+                paraNeedsProcessing.Format.Font.Size = 11;
                 paraNeedsProcessing.Format.Font.Bold = true;
                 paraNeedsProcessing.Format.Alignment = ParagraphAlignment.Left;
                 paraNeedsProcessing.Format.SpaceBefore = "0.1in";
@@ -6438,7 +6438,7 @@ namespace BlueSheetApp
 
                 Paragraph paraPhoneFaxEmail = section.AddParagraph();
                 paraPhoneFaxEmail.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                paraPhoneFaxEmail.Format.Font.Size = 9;
+                paraPhoneFaxEmail.Format.Font.Size = 11;
                 paraPhoneFaxEmail.Format.Alignment = ParagraphAlignment.Left;
                 //paraPhoneFaxEmail.Format.LeftIndent = "0.5in";
                 //paraPhoneFaxEmail.Format.RightIndent = "0.5in";
@@ -6458,7 +6458,7 @@ namespace BlueSheetApp
                 Paragraph paraNPStatement = section.AddParagraph();
                 paraNPStatement.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 0, 0);
                 paraNPStatement.Format.Font.Name = "Arial";
-                paraNPStatement.Format.Font.Size = 9;
+                paraNPStatement.Format.Font.Size = 11;
                 paraNPStatement.Format.Font.Bold = true;
                 paraNPStatement.Format.Alignment = ParagraphAlignment.Center;
                 paraNPStatement.Format.SpaceAfter = "0.1in";
@@ -6468,7 +6468,7 @@ namespace BlueSheetApp
                 Paragraph paraCheckInfo = section.AddParagraph();
                 paraCheckInfo.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                 paraCheckInfo.Format.Font.Name = "Arial";
-                paraCheckInfo.Format.Font.Size = 9;
+                paraCheckInfo.Format.Font.Size = 10;
                 paraCheckInfo.Format.Font.Bold = true;
                 paraCheckInfo.Format.Alignment = ParagraphAlignment.Left;
                 paraCheckInfo.Format.SpaceBefore = "0.1in";
@@ -6478,24 +6478,24 @@ namespace BlueSheetApp
                 if (rbCheck.Checked)
                 {
                     paraCheckInfo.AddFormattedText("Issue Date: " + ChkInfoEntered.dtCheckIssueDate.ToString("MM/dd/yyyy") +
-                                                    "\tCheck No: " + ChkInfoEntered.CheckNumber +
-                                                    "\tCheck Amount: " + ChkInfoEntered.CheckAmount.Value.ToString("C") +
-                                                    "\tPaid To: " + ChkInfoEntered.PaidTo);
+                                                    "\t\tCheck No: " + ChkInfoEntered.CheckNumber +
+                                                    "\tCheck Amount: " + ChkInfoEntered.CheckAmount.Value.ToString("C"));
+                                                    //"\tPaid To: " + ChkInfoEntered.PaidTo);
 
                     //ChkInfoEntered = null;
                 }
                 else if (rbACH.Checked)
                 {
                     paraCheckInfo.AddFormattedText("Issue Date: " + ACHInfoEntered.dtACHDate.ToString("MM/dd/yyyy") +
-                                                    "\tACH No: " + ACHInfoEntered.ACHNumber +
-                                                    "\tACH Amount: " + ACHInfoEntered.ACHAmount.Value.ToString("C") +
-                                                    "\tPaid To: " + ACHInfoEntered.PaidTo);
+                                                    "\t\tACH No: " + ACHInfoEntered.ACHNumber +
+                                                    "\tACH Amount: " + ACHInfoEntered.ACHAmount.Value.ToString("C"));
+                                                    //"\tPaid To: " + ACHInfoEntered.PaidTo);
                 }
                 else if (rbCreditCard.Checked)
                 {
                     paraCheckInfo.AddFormattedText("Date:" + CreditCardPaymentEntered.dtPaymentDate.ToString("MM/dd/yyyy") +
-                                                    "\tCredit Card Payment Amount: " + CreditCardPaymentEntered.CCPaymentAmount.Value.ToString("C") +
-                                                    "\tPaid To: " + CreditCardPaymentEntered.PaidTo);
+                                                    "\t\tCredit Card Payment Amount: " + CreditCardPaymentEntered.CCPaymentAmount.Value.ToString("C"));
+                                                    //"\tPaid To: " + CreditCardPaymentEntered.PaidTo);
                 }
 
                 //int nRowHeight = 338;
@@ -6515,11 +6515,11 @@ namespace BlueSheetApp
                     tableIncd.Borders.Width = 0;
                     tableIncd.Borders.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
-                    MigraDocDOM.Tables.Column colINCD = tableIncd.AddColumn(MigraDocDOM.Unit.FromInch(0.85));
+                    MigraDocDOM.Tables.Column colINCD = tableIncd.AddColumn(MigraDocDOM.Unit.FromInch(1.2));
                     colINCD.Format.Alignment = ParagraphAlignment.Left;
                     //colINCD = tableIncd.AddColumn(MigraDocDOM.Unit.FromInch(1));
                     //colINCD.Format.Alignment = ParagraphAlignment.Left;
-                    colINCD = tableIncd.AddColumn(MigraDocDOM.Unit.FromInch(3.5));
+                    colINCD = tableIncd.AddColumn(MigraDocDOM.Unit.FromInch(4.5));
                     colINCD.Format.Alignment = ParagraphAlignment.Left;
 
                     foreach (Incident incd in lstIncidents)
@@ -6532,7 +6532,7 @@ namespace BlueSheetApp
 
                         MigraDocDOM.Tables.Cell cellIncdName = IncdRow.Cells[0];
                         cellIncdName.Format.Font.Bold = true;
-                        cellIncdName.Format.Font.Size = 8;
+                        cellIncdName.Format.Font.Size = 9;
                         cellIncdName.Format.Font.Name = "Arial";
                         cellIncdName.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                         cellIncdName.AddParagraph(incd.Name + ": ");
@@ -6550,7 +6550,7 @@ namespace BlueSheetApp
 
                         MigraDocDOM.Tables.Cell cellICD10Code = IncdRow.Cells[1];
                         cellICD10Code.Format.Font.Bold = true;
-                        cellICD10Code.Format.Font.Size = 8;
+                        cellICD10Code.Format.Font.Size = 9;
                         cellICD10Code.Format.Font.Name = "Arial";
                         cellICD10Code.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                         cellICD10Code.AddParagraph(incd.ICD10_Code);
@@ -6577,7 +6577,7 @@ namespace BlueSheetApp
                     paraSpaceBefore.Format.SpaceAfter = "0.05in";
                     paraSpaceBefore.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 0, 0);
                     paraSpaceBefore.Format.Font.Name = "Arial";
-                    paraSpaceBefore.Format.Font.Size = 7;
+                    paraSpaceBefore.Format.Font.Size = 9;
                     paraSpaceBefore.AddFormattedText("Processed Medical Bill(s)", TextFormat.Bold);
 
                     for (int nRow = 0; nRow < gvBillPaid.RowCount; nRow++)
@@ -6686,28 +6686,28 @@ namespace BlueSheetApp
                     MigraDocDOM.Tables.Cell cellTitleMedBill = row.Cells[0];
                     cellTitleMedBill.AddParagraph("MEDBILL");
                     cellTitleMedBill.Format.Font.Bold = true;
-                    cellTitleMedBill.Format.Font.Size = 7;
+                    cellTitleMedBill.Format.Font.Size = 8;
                     cellTitleMedBill.Format.Font.Name = "Arial";
                     cellTitleMedBill.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellTitleBillDate = row.Cells[1];
                     cellTitleBillDate.AddParagraph("Date of Service");
                     cellTitleBillDate.Format.Font.Bold = true;
-                    cellTitleBillDate.Format.Font.Size = 7;
+                    cellTitleBillDate.Format.Font.Size = 8;
                     cellTitleBillDate.Format.Font.Name = "Arial";
                     cellTitleBillDate.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellTitleMedicalProvider = row.Cells[2];
                     cellTitleMedicalProvider.AddParagraph("Medical Provider");
                     cellTitleMedicalProvider.Format.Font.Bold = true;
-                    cellTitleMedicalProvider.Format.Font.Size = 7;
+                    cellTitleMedicalProvider.Format.Font.Size = 8;
                     cellTitleMedicalProvider.Format.Font.Name = "Arial";
                     cellTitleMedicalProvider.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellTitleBillAmount = row.Cells[3];
                     cellTitleBillAmount.AddParagraph("Original Amount");
                     cellTitleBillAmount.Format.Font.Bold = true;
-                    cellTitleBillAmount.Format.Font.Size = 7;
+                    cellTitleBillAmount.Format.Font.Size = 8;
                     cellTitleBillAmount.Format.Font.Name = "Arial";
                     cellTitleBillAmount.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -6722,14 +6722,14 @@ namespace BlueSheetApp
                     MigraDocDOM.Tables.Cell cellTitleMemberDiscount = row.Cells[5];
                     cellTitleMemberDiscount.AddParagraph("Member Discount");
                     cellTitleMemberDiscount.Format.Font.Bold = true;
-                    cellTitleMemberDiscount.Format.Font.Size = 7;
+                    cellTitleMemberDiscount.Format.Font.Size = 8;
                     cellTitleMemberDiscount.Format.Font.Name = "Arial";
                     cellTitleMemberDiscount.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellTitleCMMDiscount = row.Cells[6];
                     cellTitleCMMDiscount.AddParagraph("CMM Discount");
                     cellTitleCMMDiscount.Format.Font.Bold = true;
-                    cellTitleCMMDiscount.Format.Font.Size = 7;
+                    cellTitleCMMDiscount.Format.Font.Size = 8;
                     cellTitleCMMDiscount.Format.Font.Name = "Arial";
                     cellTitleCMMDiscount.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -6738,7 +6738,7 @@ namespace BlueSheetApp
                     //AddParagraph("CMM Provider Payment");
                     cellTitleCMMProviderDiscount.AddParagraph("Paid to Provider");
                     cellTitleCMMProviderDiscount.Format.Font.Bold = true;
-                    cellTitleCMMProviderDiscount.Format.Font.Size = 7;
+                    cellTitleCMMProviderDiscount.Format.Font.Size = 8;
                     cellTitleCMMProviderDiscount.Format.Font.Name = "Arial";
                     cellTitleCMMProviderDiscount.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -6747,14 +6747,14 @@ namespace BlueSheetApp
                         MigraDocDOM.Tables.Cell cellTitleSharedAmount = row.Cells[8];
                         cellTitleSharedAmount.AddParagraph("Shared Amount");
                         cellTitleSharedAmount.Format.Font.Bold = true;
-                        cellTitleSharedAmount.Format.Font.Size = 7;
+                        cellTitleSharedAmount.Format.Font.Size = 8;
                         cellTitleSharedAmount.Format.Font.Name = "Arial";
                         cellTitleSharedAmount.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                         MigraDocDOM.Tables.Cell cellTitleReimbursement = row.Cells[9];
-                        cellTitleReimbursement.AddParagraph("Reimbursement Amount");
+                        cellTitleReimbursement.AddParagraph("Reimburse- ment");
                         cellTitleReimbursement.Format.Font.Bold = true;
-                        cellTitleReimbursement.Format.Font.Size = 7;
+                        cellTitleReimbursement.Format.Font.Size = 8;
                         cellTitleReimbursement.Format.Font.Name = "Arial";
                         cellTitleReimbursement.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                     }
@@ -6764,14 +6764,14 @@ namespace BlueSheetApp
                         MigraDocDOM.Tables.Cell cellTitlePastReimbursement = row.Cells[8];
                         cellTitlePastReimbursement.AddParagraph("Shared To Provider");
                         cellTitlePastReimbursement.Format.Font.Bold = true;
-                        cellTitlePastReimbursement.Format.Font.Size = 7;
+                        cellTitlePastReimbursement.Format.Font.Size = 8;
                         cellTitlePastReimbursement.Format.Font.Name = "Arial";
                         cellTitlePastReimbursement.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                         MigraDocDOM.Tables.Cell cellTitlePastCMMProviderPayment = row.Cells[9];
                         cellTitlePastCMMProviderPayment.AddParagraph("Shared To Member");
                         cellTitlePastCMMProviderPayment.Format.Font.Bold = true;
-                        cellTitlePastCMMProviderPayment.Format.Font.Size = 7;
+                        cellTitlePastCMMProviderPayment.Format.Font.Size = 8;
                         cellTitlePastCMMProviderPayment.Format.Font.Name = "Arial";
                         cellTitlePastCMMProviderPayment.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -6790,7 +6790,7 @@ namespace BlueSheetApp
                     MigraDocDOM.Tables.Cell cellTitleBalance = row.Cells[10];
                     cellTitleBalance.AddParagraph("Balance");
                     cellTitleBalance.Format.Font.Bold = true;
-                    cellTitleBalance.Format.Font.Size = 7;
+                    cellTitleBalance.Format.Font.Size = 8;
                     cellTitleBalance.Format.Font.Name = "Arial";
                     cellTitleBalance.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -6825,7 +6825,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].MED_BILL);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -6833,7 +6833,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].Bill_Date.Value.ToString("MM/dd/yy"));
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -6848,7 +6848,7 @@ namespace BlueSheetApp
                             }
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Left;
 
@@ -6857,7 +6857,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].Bill_Amount);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -6865,7 +6865,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].Personal_Responsibility);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -6873,7 +6873,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].Member_Discount);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -6881,7 +6881,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].CMM_Discount);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -6889,7 +6889,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].CMM_Provider_Payment);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(0, 100, 100, 0);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -6898,7 +6898,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].PastCMM_Provider_Payment);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -6906,7 +6906,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].Reimbursement);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(0, 100, 100, 0);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -6914,7 +6914,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].Balance);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -6941,14 +6941,14 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].MED_BILL);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                             cell = rowData.Cells[1];
                             if (lstPaidMedicalExpenseTableRow[i].Bill_Date != null) cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].Bill_Date.Value.ToString("MM/dd/yy"));
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                             cell = rowData.Cells[2];
@@ -6964,7 +6964,7 @@ namespace BlueSheetApp
 
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Alignment = ParagraphAlignment.Center;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -6972,7 +6972,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].Bill_Amount);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Alignment = ParagraphAlignment.Right;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -6980,7 +6980,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].Personal_Responsibility);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -6988,7 +6988,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].Member_Discount);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Alignment = ParagraphAlignment.Right;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -6996,7 +6996,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].CMM_Discount);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Alignment = ParagraphAlignment.Right;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -7004,7 +7004,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].CMM_Provider_Payment);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(0, 100, 100, 0);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7013,7 +7013,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].PastCMM_Provider_Payment);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7021,7 +7021,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].Reimbursement);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(0, 100, 100, 0);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7029,7 +7029,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].Balance);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
                         }
@@ -7073,7 +7073,7 @@ namespace BlueSheetApp
                     paraSpaceBefore.Format.SpaceAfter = "0.05in";
                     paraSpaceBefore.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 0, 0);
                     paraSpaceBefore.Format.Font.Name = "Arial";
-                    paraSpaceBefore.Format.Font.Size = 7;
+                    paraSpaceBefore.Format.Font.Size = 9;
                     paraSpaceBefore.AddFormattedText("Pending Payment(s)", TextFormat.Bold);
 
                     for (int nRow = 0; nRow < gvCMMPendingPayment.RowCount; nRow++)
@@ -7150,14 +7150,14 @@ namespace BlueSheetApp
                     MigraDocDOM.Tables.Cell cellCMMPendingTitleMedBill = cmm_pending_row.Cells[0];
                     cellCMMPendingTitleMedBill.AddParagraph("MEDBILL");
                     cellCMMPendingTitleMedBill.Format.Font.Bold = true;
-                    cellCMMPendingTitleMedBill.Format.Font.Size = 7;
+                    cellCMMPendingTitleMedBill.Format.Font.Size = 8;
                     cellCMMPendingTitleMedBill.Format.Font.Name = "Arial";
                     cellCMMPendingTitleMedBill.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellCMMPendingTitleBillDate = cmm_pending_row.Cells[1];
                     cellCMMPendingTitleBillDate.AddParagraph("Date of Service");
                     cellCMMPendingTitleBillDate.Format.Font.Bold = true;
-                    cellCMMPendingTitleBillDate.Format.Font.Size = 7;
+                    cellCMMPendingTitleBillDate.Format.Font.Size = 8;
                     cellCMMPendingTitleBillDate.Format.Font.Name = "Arial";
                     cellCMMPendingTitleBillDate.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -7171,49 +7171,49 @@ namespace BlueSheetApp
                     MigraDocDOM.Tables.Cell cellCMMPendingTitleMedicalProvider = cmm_pending_row.Cells[2];
                     cellCMMPendingTitleMedicalProvider.AddParagraph("Medical Provider");
                     cellCMMPendingTitleMedicalProvider.Format.Font.Bold = true;
-                    cellCMMPendingTitleMedicalProvider.Format.Font.Size = 7;
+                    cellCMMPendingTitleMedicalProvider.Format.Font.Size = 8;
                     cellCMMPendingTitleMedicalProvider.Format.Font.Name = "Arial";
                     cellCMMPendingTitleMedicalProvider.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellCMMPendingTitleBillAmount = cmm_pending_row.Cells[3];
                     cellCMMPendingTitleBillAmount.AddParagraph("Original Amount");
                     cellCMMPendingTitleBillAmount.Format.Font.Bold = true;
-                    cellCMMPendingTitleBillAmount.Format.Font.Size = 7;
+                    cellCMMPendingTitleBillAmount.Format.Font.Size = 8;
                     cellCMMPendingTitleBillAmount.Format.Font.Name = "Arial";
                     cellCMMPendingTitleBillAmount.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellCMMPendingTitleMemberDiscount = cmm_pending_row.Cells[4];
                     cellCMMPendingTitleMemberDiscount.AddParagraph("Member Discount");
                     cellCMMPendingTitleMemberDiscount.Format.Font.Bold = true;
-                    cellCMMPendingTitleMemberDiscount.Format.Font.Size = 7;
+                    cellCMMPendingTitleMemberDiscount.Format.Font.Size = 8;
                     cellCMMPendingTitleMemberDiscount.Format.Font.Name = "Arial";
                     cellCMMPendingTitleMemberDiscount.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellCMMPendingTitleCMMDiscount = cmm_pending_row.Cells[5];
                     cellCMMPendingTitleCMMDiscount.AddParagraph("CMM Discount");
                     cellCMMPendingTitleCMMDiscount.Format.Font.Bold = true;
-                    cellCMMPendingTitleCMMDiscount.Format.Font.Size = 7;
+                    cellCMMPendingTitleCMMDiscount.Format.Font.Size = 8;
                     cellCMMPendingTitleCMMDiscount.Format.Font.Name = "Arial";
                     cellCMMPendingTitleCMMDiscount.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellCMMPendingTitlePersonalResponsibility = cmm_pending_row.Cells[6];
                     cellCMMPendingTitlePersonalResponsibility.AddParagraph("Personal Responsibility");
                     cellCMMPendingTitlePersonalResponsibility.Format.Font.Bold = true;
-                    cellCMMPendingTitlePersonalResponsibility.Format.Font.Size = 7;
+                    cellCMMPendingTitlePersonalResponsibility.Format.Font.Size = 8;
                     cellCMMPendingTitlePersonalResponsibility.Format.Font.Name = "Arial";
                     cellCMMPendingTitlePersonalResponsibility.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellCMMPendingTitleSharedAmount = cmm_pending_row.Cells[7];
                     cellCMMPendingTitleSharedAmount.AddParagraph("Total Shared Amount");
                     cellCMMPendingTitleSharedAmount.Format.Font.Bold = true;
-                    cellCMMPendingTitleSharedAmount.Format.Font.Size = 7;
+                    cellCMMPendingTitleSharedAmount.Format.Font.Size = 8;
                     cellCMMPendingTitleSharedAmount.Format.Font.Name = "Arial";
                     cellCMMPendingTitleSharedAmount.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellCMMPendingTitleBalance = cmm_pending_row.Cells[8];
                     cellCMMPendingTitleBalance.AddParagraph("Balance");
                     cellCMMPendingTitleBalance.Format.Font.Bold = true;
-                    cellCMMPendingTitleBalance.Format.Font.Size = 7;
+                    cellCMMPendingTitleBalance.Format.Font.Size = 8;
                     cellCMMPendingTitleBalance.Format.Font.Name = "Arial";
                     cellCMMPendingTitleBalance.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -7246,7 +7246,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].MED_BILL);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -7254,7 +7254,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].Bill_Date);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -7276,7 +7276,7 @@ namespace BlueSheetApp
                             }
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Left;
 
@@ -7284,7 +7284,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].Bill_Amount);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7292,7 +7292,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].Member_Discount);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7300,7 +7300,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].CMM_Discount);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7308,7 +7308,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].PersonalResponsibility);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7316,7 +7316,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].Shared_Amount);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7324,7 +7324,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].Balance);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(0, 100, 100, 0);
                             cell.Format.Alignment = ParagraphAlignment.Right;
                         }
@@ -7351,7 +7351,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].MED_BILL);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -7359,7 +7359,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].Bill_Date);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -7382,7 +7382,7 @@ namespace BlueSheetApp
                             cell.AddParagraph("Total");
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -7390,7 +7390,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].Bill_Amount);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7398,7 +7398,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].Member_Discount);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7406,7 +7406,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].CMM_Discount);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7414,7 +7414,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].PersonalResponsibility);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7422,7 +7422,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].Shared_Amount);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7430,7 +7430,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstCMMPendingPaymentTableRow[i].Balance);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(0, 100, 100, 0);
                             cell.Format.Alignment = ParagraphAlignment.Right;
                         }
@@ -7473,7 +7473,7 @@ namespace BlueSheetApp
                     paraSpaceBefore.Format.SpaceAfter = "0.05in";
                     paraSpaceBefore.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(0, 100, 100, 0);
                     paraSpaceBefore.Format.Font.Name = "Arial";
-                    paraSpaceBefore.Format.Font.Size = 7;
+                    paraSpaceBefore.Format.Font.Size = 9;
                     paraSpaceBefore.AddFormattedText("Pending Medical Bill(s)", TextFormat.Bold);
 
                     for (int nRow = 0; nRow < gvPending.RowCount; nRow++)
@@ -7554,35 +7554,35 @@ namespace BlueSheetApp
                     MigraDocDOM.Tables.Cell cellPendingTitleMED_BILL = pending_Row.Cells[0];
                     cellPendingTitleMED_BILL.AddParagraph("MEDBILL");
                     cellPendingTitleMED_BILL.Format.Font.Bold = true;
-                    cellPendingTitleMED_BILL.Format.Font.Size = 7;
+                    cellPendingTitleMED_BILL.Format.Font.Size = 8;
                     cellPendingTitleMED_BILL.Format.Font.Name = "Arial";
                     cellPendingTitleMED_BILL.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellPendingTitleBill_Date = pending_Row.Cells[1];
                     cellPendingTitleBill_Date.AddParagraph("Date of Service");
                     cellPendingTitleBill_Date.Format.Font.Bold = true;
-                    cellPendingTitleBill_Date.Format.Font.Size = 7;
+                    cellPendingTitleBill_Date.Format.Font.Size = 8;
                     cellPendingTitleBill_Date.Format.Font.Name = "Arial";
                     cellPendingTitleBill_Date.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellPendingTitleDue_Date = pending_Row.Cells[2];
                     cellPendingTitleDue_Date.AddParagraph("Received Date");
                     cellPendingTitleDue_Date.Format.Font.Bold = true;
-                    cellPendingTitleDue_Date.Format.Font.Size = 7;
+                    cellPendingTitleDue_Date.Format.Font.Size = 8;
                     cellPendingTitleDue_Date.Format.Font.Name = "Arial";
                     cellPendingTitleDue_Date.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellPendingTitleMedicalProvider = pending_Row.Cells[3];
                     cellPendingTitleMedicalProvider.AddParagraph("Medical Provider");
                     cellPendingTitleMedicalProvider.Format.Font.Bold = true;
-                    cellPendingTitleMedicalProvider.Format.Font.Size = 7;
+                    cellPendingTitleMedicalProvider.Format.Font.Size = 8;
                     cellPendingTitleMedicalProvider.Format.Font.Name = "Arial";
                     cellPendingTitleMedicalProvider.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellPendingTitleBillAmount = pending_Row.Cells[4];
                     cellPendingTitleBillAmount.AddParagraph("Original Amount");
                     cellPendingTitleBillAmount.Format.Font.Bold = true;
-                    cellPendingTitleBillAmount.Format.Font.Size = 7;
+                    cellPendingTitleBillAmount.Format.Font.Size = 8;
                     cellPendingTitleBillAmount.Format.Font.Name = "Arial";
                     cellPendingTitleBillAmount.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -7617,14 +7617,14 @@ namespace BlueSheetApp
                     MigraDocDOM.Tables.Cell cellPendingTitleBalance = pending_Row.Cells[5];
                     cellPendingTitleBalance.AddParagraph("Balance");
                     cellPendingTitleBalance.Format.Font.Bold = true;
-                    cellPendingTitleBalance.Format.Font.Size = 7;
+                    cellPendingTitleBalance.Format.Font.Size = 8;
                     cellPendingTitleBalance.Format.Font.Name = "Arial";
                     cellPendingTitleBalance.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellPendingTitlePendingReason = pending_Row.Cells[6];
                     cellPendingTitlePendingReason.AddParagraph("Pending Reason");
                     cellPendingTitlePendingReason.Format.Font.Bold = true;
-                    cellPendingTitlePendingReason.Format.Font.Size = 7;
+                    cellPendingTitlePendingReason.Format.Font.Size = 8;
                     cellPendingTitlePendingReason.Format.Font.Name = "Arial";
                     cellPendingTitlePendingReason.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -7657,7 +7657,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPendingTableRow[i].MED_BILL);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -7665,7 +7665,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPendingTableRow[i].Bill_Date);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -7673,7 +7673,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPendingTableRow[i].Due_Date);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -7689,7 +7689,7 @@ namespace BlueSheetApp
                             }
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Left;
 
@@ -7697,7 +7697,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPendingTableRow[i].Bill_Amount);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7705,7 +7705,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPendingTableRow[i].Balance);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7752,7 +7752,7 @@ namespace BlueSheetApp
                             }
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Left;
 
@@ -7780,21 +7780,21 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPendingTableRow[i].MED_BILL);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                             cell = pendingRowData.Cells[1];
                             cell.AddParagraph(lstPendingTableRow[i].Bill_Date);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                             cell = pendingRowData.Cells[2];
                             cell.AddParagraph(lstPendingTableRow[i].Due_Date);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                             cell = pendingRowData.Cells[3];
@@ -7810,14 +7810,14 @@ namespace BlueSheetApp
 
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                             cell = pendingRowData.Cells[4];
                             cell.AddParagraph(lstPendingTableRow[i].Bill_Amount);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7825,7 +7825,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstPendingTableRow[i].Balance);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -7873,7 +7873,7 @@ namespace BlueSheetApp
                             //cell.AddParagraph(lstPendingTableRow[i].Pending_Reason);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Left;
 
@@ -7945,7 +7945,7 @@ namespace BlueSheetApp
                     paraSpaceBefore.Format.SpaceAfter = "0.05in";
                     paraSpaceBefore.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(0, 100, 100, 0);
                     paraSpaceBefore.Format.Font.Name = "Arial";
-                    paraSpaceBefore.Format.Font.Size = 7;
+                    paraSpaceBefore.Format.Font.Size = 9;
                     paraSpaceBefore.AddFormattedText("Ineligible Medical Bill(s)", TextFormat.Bold);
 
                     MigraDocDOM.Tables.Table tableIneligible = new MigraDocDOM.Tables.Table();
@@ -7989,42 +7989,42 @@ namespace BlueSheetApp
                     MigraDocDOM.Tables.Cell cellIneligibleTitleMedBill = ineligible_Row.Cells[0];
                     cellIneligibleTitleMedBill.AddParagraph("MEDBILL");
                     cellIneligibleTitleMedBill.Format.Font.Bold = true;
-                    cellIneligibleTitleMedBill.Format.Font.Size = 7;
+                    cellIneligibleTitleMedBill.Format.Font.Size = 8;
                     cellIneligibleTitleMedBill.Format.Font.Name = "Arial";
                     cellIneligibleTitleMedBill.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellIneligibleTitleBillDate = ineligible_Row.Cells[1];
                     cellIneligibleTitleBillDate.AddParagraph("Date of Service");
                     cellIneligibleTitleBillDate.Format.Font.Bold = true;
-                    cellIneligibleTitleBillDate.Format.Font.Size = 7;
+                    cellIneligibleTitleBillDate.Format.Font.Size = 8;
                     cellIneligibleTitleBillDate.Format.Font.Name = "Arial";
                     cellIneligibleTitleBillDate.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellIneligibleTitleMedicalProvider = ineligible_Row.Cells[2];
                     cellIneligibleTitleMedicalProvider.AddParagraph("Medical Provider");
                     cellIneligibleTitleMedicalProvider.Format.Font.Bold = true;
-                    cellIneligibleTitleMedicalProvider.Format.Font.Size = 7;
+                    cellIneligibleTitleMedicalProvider.Format.Font.Size = 8;
                     cellIneligibleTitleMedicalProvider.Format.Font.Name = "Arial";
                     cellIneligibleTitleMedicalProvider.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellIneligibleTitleBillAmount = ineligible_Row.Cells[3];
                     cellIneligibleTitleBillAmount.AddParagraph("Original Amount");
                     cellIneligibleTitleBillAmount.Format.Font.Bold = true;
-                    cellIneligibleTitleBillAmount.Format.Font.Size = 7;
+                    cellIneligibleTitleBillAmount.Format.Font.Size = 8;
                     cellIneligibleTitleBillAmount.Format.Font.Name = "Arial";
                     cellIneligibleTitleBillAmount.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellIneligibleTitleAmountIneligible = ineligible_Row.Cells[4];
                     cellIneligibleTitleAmountIneligible.AddParagraph("Ineligible");
                     cellIneligibleTitleAmountIneligible.Format.Font.Bold = true;
-                    cellIneligibleTitleAmountIneligible.Format.Font.Size = 7;
+                    cellIneligibleTitleAmountIneligible.Format.Font.Size = 8;
                     cellIneligibleTitleAmountIneligible.Format.Font.Name = "Arial";
                     cellIneligibleTitleAmountIneligible.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellIneligibleTitleIneligibleReason = ineligible_Row.Cells[5];
                     cellIneligibleTitleIneligibleReason.AddParagraph("Ineligible Reason");
                     cellIneligibleTitleIneligibleReason.Format.Font.Bold = true;
-                    cellIneligibleTitleIneligibleReason.Format.Font.Size = 7;
+                    cellIneligibleTitleIneligibleReason.Format.Font.Size = 8;
                     cellIneligibleTitleIneligibleReason.Format.Font.Name = "Arial";
                     cellIneligibleTitleIneligibleReason.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -8062,7 +8062,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstBillIneligibleTableRow[i].MED_BILL);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -8070,7 +8070,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstBillIneligibleTableRow[i].Bill_Date);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -8087,7 +8087,7 @@ namespace BlueSheetApp
 
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Left;
 
@@ -8096,7 +8096,7 @@ namespace BlueSheetApp
                             ineligible.Bill_Amount = Double.Parse(lstBillIneligibleTableRow[i].Bill_Amount.Substring(1));
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -8105,7 +8105,7 @@ namespace BlueSheetApp
                             ineligible.Amount_Ineligible = Double.Parse(lstBillIneligibleTableRow[i].Amount_Ineligible.Substring(1));
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -8121,7 +8121,7 @@ namespace BlueSheetApp
                             }
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Left;
 
@@ -8153,14 +8153,14 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstBillIneligibleTableRow[i].MED_BILL);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                             cell = rowData.Cells[1];
                             cell.AddParagraph(lstBillIneligibleTableRow[i].Bill_Date);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                             cell = rowData.Cells[2];
@@ -8175,7 +8175,7 @@ namespace BlueSheetApp
                             cell.AddParagraph("Total");
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                             Double? BillAmount = 0;
@@ -8188,7 +8188,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(BillAmount.Value.ToString("C"));
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -8202,7 +8202,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(IneligibleAmount.Value.ToString("C"));
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -8216,7 +8216,7 @@ namespace BlueSheetApp
                             }
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Arial";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Left;
                         }
@@ -8424,7 +8424,7 @@ namespace BlueSheetApp
                 Paragraph paraDearMember = section.AddParagraph();
                 paraDearMember.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                 paraDearMember.Format.Font.Name = "Arial";
-                paraDearMember.Format.Font.Size = 8;
+                paraDearMember.Format.Font.Size = 10;
                 paraDearMember.Format.Alignment = ParagraphAlignment.Left;
                 //paraDearMember.Format.LeftIndent = "0.5in";
                 //paraDearMember.Format.RightIndent = "0.5in";
@@ -8440,7 +8440,7 @@ namespace BlueSheetApp
 
                 paraPRGreetingMessage1.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                 paraPRGreetingMessage1.Format.Font.Name = "Arial";
-                paraPRGreetingMessage1.Format.Font.Size = 8;
+                paraPRGreetingMessage1.Format.Font.Size = 10;
                 paraPRGreetingMessage1.Format.SpaceAfter = "5pt";
                 //paraGreetingMessage.Format.LeftIndent = "0.5in";
                 //paraGreetingMessage.Format.RightIndent = "0.5in";
@@ -8560,7 +8560,7 @@ namespace BlueSheetApp
                 Paragraph paraPRGreetingMessage2 = section.AddParagraph();
                 paraPRGreetingMessage2.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                 paraPRGreetingMessage2.Format.Font.Name = "Arial";
-                paraPRGreetingMessage2.Format.Font.Size = 8;
+                paraPRGreetingMessage2.Format.Font.Size = 10;
                 paraPRGreetingMessage2.Format.SpaceAfter = "5pt";
                 //paraGreetingMessage2.Format.LeftIndent = "0.5in";
                 //paraGreetingMessage2.Format.RightIndent = "0.5in";
@@ -8570,7 +8570,7 @@ namespace BlueSheetApp
                 Paragraph paraPRGreetingMessage3 = section.AddParagraph();
                 paraPRGreetingMessage3.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                 paraPRGreetingMessage3.Format.Font.Name = "Arial";
-                paraPRGreetingMessage3.Format.Font.Size = 8;
+                paraPRGreetingMessage3.Format.Font.Size = 10;
                 paraPRGreetingMessage3.Format.SpaceAfter = "5pt";
                 //paraGreetingMessage3.Format.LeftIndent = "0.5in";
                 //paraGreetingMessage3.Format.RightIndent = "0.5in";
@@ -8581,7 +8581,7 @@ namespace BlueSheetApp
                 Paragraph paraPRGreetingMessage4 = section.AddParagraph();
                 paraPRGreetingMessage4.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                 paraPRGreetingMessage4.Format.Font.Name = "Arial";
-                paraPRGreetingMessage4.Format.Font.Size = 8;
+                paraPRGreetingMessage4.Format.Font.Size = 10;
                 paraPRGreetingMessage4.Format.SpaceAfter = "5pt";
                 //paraGreetingMessage3.Format.LeftIndent = "0.5in";
                 //paraGreetingMessage3.Format.RightIndent = "0.5in";
@@ -8591,11 +8591,11 @@ namespace BlueSheetApp
                 Paragraph paraPRGreetingMessage5 = section.AddParagraph();
                 paraPRGreetingMessage4.Format.Font.Color = MigraDoc.DocumentObjectModel.Color.FromCmyk(100, 100, 100, 100);
                 paraPRGreetingMessage4.Format.Font.Name = "Arial";
-                paraPRGreetingMessage4.Format.Font.Size = 8;
+                paraPRGreetingMessage4.Format.Font.Size = 10;
                 paraPRGreetingMessage4.Format.SpaceAfter = "5pt";
                 //paraGreetingMessage3.Format.LeftIndent = "0.5in";
                 //paraGreetingMessage3.Format.RightIndent = "0.5in";
-                paraPRGreetingMessage4.Format.Alignment = ParagraphAlignment.Justify;
+                paraPRGreetingMessage4.Format.Alignment = ParagraphAlignment.Left;
                 paraPRGreetingMessage4.AddFormattedText(strEnglishPRGreetingMessage5, TextFormat.NotBold);
 
                 //Paragraph paraPRGreetingMessage4 = section.AddParagraph();
@@ -8633,7 +8633,7 @@ namespace BlueSheetApp
 
                 paraNeedsProcessing.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                 paraNeedsProcessing.Format.Font.Name = "Arial";
-                paraNeedsProcessing.Format.Font.Size = 8;
+                paraNeedsProcessing.Format.Font.Size = 11;
                 paraNeedsProcessing.Format.Font.Bold = true;
                 paraNeedsProcessing.Format.Alignment = ParagraphAlignment.Left;
                 //paraNeedsProcessing.Format.SpaceBefore = "0.1in";
@@ -8643,7 +8643,7 @@ namespace BlueSheetApp
 
                 Paragraph paraPhoneFaxEmail = section.AddParagraph();
                 paraPhoneFaxEmail.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
-                paraPhoneFaxEmail.Format.Font.Size = 8;
+                paraPhoneFaxEmail.Format.Font.Size = 11;
                 paraPhoneFaxEmail.Format.Alignment = ParagraphAlignment.Left;
                 //paraPhoneFaxEmail.Format.LeftIndent = "0.5in";
                 paraPhoneFaxEmail.Format.RightIndent = "0.5in";
@@ -8698,7 +8698,7 @@ namespace BlueSheetApp
                 Paragraph paraINCDNumber = section.AddParagraph();
                 paraINCDNumber.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                 paraINCDNumber.Format.Font.Name = "Arial";
-                paraINCDNumber.Format.Font.Size = 8;
+                paraINCDNumber.Format.Font.Size = 11;
                 paraINCDNumber.Format.Font.Bold = true;
                 paraINCDNumber.Format.Alignment = ParagraphAlignment.Left;
                 paraINCDNumber.Format.SpaceBefore = "0.05in";
@@ -8806,7 +8806,7 @@ namespace BlueSheetApp
                 Paragraph paraPersonalResponsibilityTitle = section.AddParagraph();
                 paraPersonalResponsibilityTitle.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                 paraPersonalResponsibilityTitle.Format.Font.Name = "Arial";
-                paraPersonalResponsibilityTitle.Format.Font.Size = 7;
+                paraPersonalResponsibilityTitle.Format.Font.Size = 9;
                 paraPersonalResponsibilityTitle.Format.Font.Bold = true;
                 paraPersonalResponsibilityTitle.Format.Alignment = ParagraphAlignment.Left;
                 paraPersonalResponsibilityTitle.Format.SpaceBefore = "0.18in";
@@ -8845,42 +8845,42 @@ namespace BlueSheetApp
                 MigraDocDOM.Tables.Cell cellPersonalResponsibilityMedBill = prRow.Cells[0];
                 cellPersonalResponsibilityMedBill.AddParagraph("MEDBILL");
                 cellPersonalResponsibilityMedBill.Format.Font.Bold = true;
-                cellPersonalResponsibilityMedBill.Format.Font.Size = 7;
+                cellPersonalResponsibilityMedBill.Format.Font.Size = 8;
                 cellPersonalResponsibilityMedBill.Format.Font.Name = "Arial";
                 cellPersonalResponsibilityMedBill.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                 MigraDocDOM.Tables.Cell cellPersonalResponsibilityBillDate = prRow.Cells[1];
                 cellPersonalResponsibilityBillDate.AddParagraph("Date of Service");
                 cellPersonalResponsibilityBillDate.Format.Font.Bold = true;
-                cellPersonalResponsibilityBillDate.Format.Font.Size = 7;
+                cellPersonalResponsibilityBillDate.Format.Font.Size = 8;
                 cellPersonalResponsibilityBillDate.Format.Font.Name = "Arial";
                 cellPersonalResponsibilityBillDate.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                 MigraDocDOM.Tables.Cell cellPersonalResponsibilityMedicalProvider = prRow.Cells[2];
                 cellPersonalResponsibilityMedicalProvider.AddParagraph("Medical Provider");
                 cellPersonalResponsibilityMedicalProvider.Format.Font.Bold = true;
-                cellPersonalResponsibilityMedicalProvider.Format.Font.Size = 7;
+                cellPersonalResponsibilityMedicalProvider.Format.Font.Size = 8;
                 cellPersonalResponsibilityMedicalProvider.Format.Font.Name = "Arial";
                 cellPersonalResponsibilityMedicalProvider.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                 MigraDocDOM.Tables.Cell cellPersonalResponsibilityBillAmount = prRow.Cells[3];
                 cellPersonalResponsibilityBillAmount.AddParagraph("Original Amount");
                 cellPersonalResponsibilityBillAmount.Format.Font.Bold = true;
-                cellPersonalResponsibilityBillAmount.Format.Font.Size = 7;
+                cellPersonalResponsibilityBillAmount.Format.Font.Size = 8;
                 cellPersonalResponsibilityBillAmount.Format.Font.Name = "Arial";
                 cellPersonalResponsibilityBillAmount.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                 MigraDocDOM.Tables.Cell cellPersonalResponsibilityType = prRow.Cells[4];
                 cellPersonalResponsibilityType.AddParagraph("Type");
                 cellPersonalResponsibilityType.Format.Font.Bold = true;
-                cellPersonalResponsibilityType.Format.Font.Size = 7;
+                cellPersonalResponsibilityType.Format.Font.Size = 8;
                 cellPersonalResponsibilityType.Format.Font.Name = "Arial";
                 cellPersonalResponsibilityType.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                 MigraDocDOM.Tables.Cell cellPersonalResponsibilityTotal = prRow.Cells[5];
                 cellPersonalResponsibilityTotal.AddParagraph("Personal Responsibility Total");
                 cellPersonalResponsibilityTotal.Format.Font.Bold = true;
-                cellPersonalResponsibilityTotal.Format.Font.Size = 7;
+                cellPersonalResponsibilityTotal.Format.Font.Size = 8;
                 cellPersonalResponsibilityTotal.Format.Font.Name = "Arial";
                 cellPersonalResponsibilityTotal.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
@@ -8897,7 +8897,7 @@ namespace BlueSheetApp
                         cell.AddParagraph(lstPersonalResponsibilityInfo[i].MedBillName.Substring(8));
                         cell.Format.Font.Bold = false;
                         cell.Format.Font.Name = "Arial";
-                        cell.Format.Font.Size = 7;
+                        cell.Format.Font.Size = 8;
                         cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                         cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -8905,7 +8905,7 @@ namespace BlueSheetApp
                         cell.AddParagraph(lstPersonalResponsibilityInfo[i].BillDate.Value.ToString("MM/dd/yyyy"));
                         cell.Format.Font.Bold = false;
                         cell.Format.Font.Name = "Arial";
-                        cell.Format.Font.Size = 7;
+                        cell.Format.Font.Size = 8;
                         cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                         cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -8914,7 +8914,7 @@ namespace BlueSheetApp
                         else cell.AddParagraph(lstPersonalResponsibilityInfo[i].MedicalProvider);
                         cell.Format.Font.Bold = false;
                         cell.Format.Font.Name = "Arial";
-                        cell.Format.Font.Size = 7;
+                        cell.Format.Font.Size = 8;
                         cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                         cell.Format.Alignment = ParagraphAlignment.Left;
 
@@ -8922,7 +8922,7 @@ namespace BlueSheetApp
                         cell.AddParagraph(lstPersonalResponsibilityInfo[i].BillAmount.ToString("C"));
                         cell.Format.Font.Bold = false;
                         cell.Format.Font.Name = "Arial";
-                        cell.Format.Font.Size = 7;
+                        cell.Format.Font.Size = 8;
                         cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                         cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -8930,7 +8930,7 @@ namespace BlueSheetApp
                         cell.AddParagraph(lstPersonalResponsibilityInfo[i].Type);
                         cell.Format.Font.Bold = false;
                         cell.Format.Font.Name = "Arial";
-                        cell.Format.Font.Size = 7;
+                        cell.Format.Font.Size = 8;
                         cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                         cell.Format.Alignment = ParagraphAlignment.Left;
 
@@ -8938,7 +8938,7 @@ namespace BlueSheetApp
                         cell.AddParagraph(lstPersonalResponsibilityInfo[i].PersonalResponsibilityTotal.ToString("C"));
                         cell.Format.Font.Bold = false;
                         cell.Format.Font.Name = "Arial";
-                        cell.Format.Font.Size = 7;
+                        cell.Format.Font.Size = 8;
                         cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                         cell.Format.Alignment = ParagraphAlignment.Right;
                     }
@@ -8952,7 +8952,7 @@ namespace BlueSheetApp
                         cell.AddParagraph(lstPersonalResponsibilityInfo[i].MedBillName);
                         cell.Format.Font.Bold = true;
                         cell.Format.Font.Name = "Arial";
-                        cell.Format.Font.Size = 7;
+                        cell.Format.Font.Size = 8;
                         cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                         cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -8960,7 +8960,7 @@ namespace BlueSheetApp
                         if (lstPersonalResponsibilityInfo[i].BillDate != null) cell.AddParagraph(lstPersonalResponsibilityInfo[i].BillDate.Value.ToString("MM/dd/yyyy"));
                         cell.Format.Font.Bold = true;
                         cell.Format.Font.Name = "Arial";
-                        cell.Format.Font.Size = 7;
+                        cell.Format.Font.Size = 8;
                         cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                         cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -8969,7 +8969,7 @@ namespace BlueSheetApp
                         cell.AddParagraph("Total");
                         cell.Format.Font.Bold = true;
                         cell.Format.Font.Name = "Arial";
-                        cell.Format.Font.Size = 7;
+                        cell.Format.Font.Size = 8;
                         cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                         //cell.Format.Alignment = ParagraphAlignment.Left;
                         cell.Format.Alignment = ParagraphAlignment.Center;
@@ -8978,7 +8978,7 @@ namespace BlueSheetApp
                         cell.AddParagraph(lstPersonalResponsibilityInfo[i].BillAmount.ToString("C"));
                         cell.Format.Font.Bold = true;
                         cell.Format.Font.Name = "Arial";
-                        cell.Format.Font.Size = 7;
+                        cell.Format.Font.Size = 8;
                         cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                         cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -8986,7 +8986,7 @@ namespace BlueSheetApp
                         cell.AddParagraph(lstPersonalResponsibilityInfo[i].Type);
                         cell.Format.Font.Bold = true;
                         cell.Format.Font.Name = "Arial";
-                        cell.Format.Font.Size = 7;
+                        cell.Format.Font.Size = 8;
                         cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                         cell.Format.Alignment = ParagraphAlignment.Left;
 
@@ -8994,7 +8994,7 @@ namespace BlueSheetApp
                         cell.AddParagraph(lstPersonalResponsibilityInfo[i].PersonalResponsibilityTotal.ToString("C"));
                         cell.Format.Font.Bold = true;
                         cell.Format.Font.Name = "Arial";
-                        cell.Format.Font.Size = 7;
+                        cell.Format.Font.Size = 8;
                         cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                         cell.Format.Alignment = ParagraphAlignment.Right;
                     }
@@ -9033,7 +9033,7 @@ namespace BlueSheetApp
                     Paragraph paraIneligibleTitle = section.AddParagraph();
                     paraIneligibleTitle.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                     paraIneligibleTitle.Format.Font.Name = "Arial";
-                    paraIneligibleTitle.Format.Font.Size = 7;
+                    paraIneligibleTitle.Format.Font.Size = 9;
                     paraIneligibleTitle.Format.Font.Bold = true;
                     paraIneligibleTitle.Format.Alignment = ParagraphAlignment.Left;
                     paraIneligibleTitle.Format.SpaceBefore = "0.15in";
@@ -9067,27 +9067,27 @@ namespace BlueSheetApp
                     MigraDocDOM.Tables.Cell cellIneligibleNoPRMedBill = ineligibleRow.Cells[0];
                     cellIneligibleNoPRMedBill.AddParagraph("MEDBILL");
                     cellIneligibleNoPRMedBill.Format.Font.Bold = true;
-                    cellIneligibleNoPRMedBill.Format.Font.Size = 7;
+                    cellIneligibleNoPRMedBill.Format.Font.Size = 8;
                     cellIneligibleNoPRMedBill.Format.Font.Name = "Malgun Gothic";
                     cellIneligibleNoPRMedBill.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellIneligibleNoPRBillDate = ineligibleRow.Cells[1];
                     cellIneligibleNoPRBillDate.AddParagraph("Date of Service");
                     cellIneligibleNoPRBillDate.Format.Font.Bold = true;
-                    cellIneligibleNoPRBillDate.Format.Font.Size = 7;
+                    cellIneligibleNoPRBillDate.Format.Font.Size = 8;
                     cellIneligibleNoPRBillDate.Format.Font.Name = "Malgun Gothic";
                     cellIneligibleNoPRBillDate.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
 
                     MigraDocDOM.Tables.Cell cellIneligibleNoPRMedicalProvider = ineligibleRow.Cells[2];
                     cellIneligibleNoPRMedicalProvider.AddParagraph("Medical Provider");
                     cellIneligibleNoPRMedicalProvider.Format.Font.Bold = true;
-                    cellIneligibleNoPRMedicalProvider.Format.Font.Size = 7;
+                    cellIneligibleNoPRMedicalProvider.Format.Font.Size = 8;
                     cellIneligibleNoPRMedicalProvider.Format.Font.Name = "Malgun Gothic";
 
                     MigraDocDOM.Tables.Cell cellIneligibleNoPRBillAmount = ineligibleRow.Cells[3];
                     cellIneligibleNoPRBillAmount.AddParagraph("Original Amount");
                     cellIneligibleNoPRBillAmount.Format.Font.Bold = true;
-                    cellIneligibleNoPRBillAmount.Format.Font.Size = 7;
+                    cellIneligibleNoPRBillAmount.Format.Font.Size = 8;
                     cellIneligibleNoPRBillAmount.Format.Font.Name = "Malgun Gothic";
 
                     //MigraDocDOM.Tables.Cell cellIneligibleNoPRType = ineligibleRow.Cells[4];
@@ -9099,13 +9099,13 @@ namespace BlueSheetApp
                     MigraDocDOM.Tables.Cell cellIneligibleNoPRIneligibleAmount = ineligibleRow.Cells[4];
                     cellIneligibleNoPRIneligibleAmount.AddParagraph("Ineligible");
                     cellIneligibleNoPRIneligibleAmount.Format.Font.Bold = true;
-                    cellIneligibleNoPRIneligibleAmount.Format.Font.Size = 7;
+                    cellIneligibleNoPRIneligibleAmount.Format.Font.Size = 8;
                     cellIneligibleNoPRIneligibleAmount.Format.Font.Name = "Malgun Gothic";
 
                     MigraDocDOM.Tables.Cell cellIneligibleNoPRIneligibleReason = ineligibleRow.Cells[5];
                     cellIneligibleNoPRIneligibleReason.AddParagraph("Ineligible Reason");
                     cellIneligibleNoPRIneligibleReason.Format.Font.Bold = true;
-                    cellIneligibleNoPRIneligibleReason.Format.Font.Size = 7;
+                    cellIneligibleNoPRIneligibleReason.Format.Font.Size = 8;
                     cellIneligibleNoPRIneligibleReason.Format.Font.Name = "Malgun Gothic";
 
                     for (int i = 0; i < lstMedBillNoPRNoSharing.Count; i++)
@@ -9120,7 +9120,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstMedBillNoPRNoSharing[i].MedBillName.Substring(8));
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Malgun Gothic";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -9128,7 +9128,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstMedBillNoPRNoSharing[i].BillDate.Value.ToString("MM/dd/yyyy"));
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Malgun Gothic";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -9136,7 +9136,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstMedBillNoPRNoSharing[i].MedicalProvider);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Malgun Gothic";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Left;
 
@@ -9144,7 +9144,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstMedBillNoPRNoSharing[i].BillAmount.ToString("C"));
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Malgun Gothic";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -9160,7 +9160,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstMedBillNoPRNoSharing[i].IneligibleAmount.Value.ToString("C"));
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Malgun Gothic";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -9168,7 +9168,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstMedBillNoPRNoSharing[i].IneligibleReason);
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Malgun Gothic";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Left;
                         }
@@ -9182,7 +9182,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstMedBillNoPRNoSharing[i].MedBillName);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Malgun Gothic";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -9190,7 +9190,7 @@ namespace BlueSheetApp
                             if (lstMedBillNoPRNoSharing[i].BillDate != null) cell.AddParagraph(lstMedBillNoPRNoSharing[i].BillDate.Value.ToString("MM/dd/yyyy"));
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Malgun Gothic";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -9199,7 +9199,7 @@ namespace BlueSheetApp
                             cell.AddParagraph("Total");
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Malgun Gothic";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Center;
 
@@ -9207,7 +9207,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstMedBillNoPRNoSharing[i].BillAmount.ToString("C"));
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Malgun Gothic";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -9223,7 +9223,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstMedBillNoPRNoSharing[i].IneligibleAmount.Value.ToString("C"));
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Malgun Gothic";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
@@ -9231,7 +9231,7 @@ namespace BlueSheetApp
                             cell.AddParagraph(lstMedBillNoPRNoSharing[i].IneligibleReason);
                             cell.Format.Font.Bold = true;
                             cell.Format.Font.Name = "Malgun Gothic";
-                            cell.Format.Font.Size = 7;
+                            cell.Format.Font.Size = 8;
                             cell.Format.Font.Color = MigraDocDOM.Color.FromCmyk(100, 100, 100, 100);
                             cell.Format.Alignment = ParagraphAlignment.Left;
                         }
