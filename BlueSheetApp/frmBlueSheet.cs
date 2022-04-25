@@ -4924,8 +4924,8 @@ namespace BlueSheetApp
                     //    (nRowHeight + nHeightAfterIneligible) > 645)
                     //if ((nRowHeight > 620)||
                     //    (nRowHeight + nHeightAfterIneligible) > 620)
-                    if ((nRowHeight > 680) ||
-                        (nRowHeight + nHeightAfterIneligible) > 680)
+                    if ((nRowHeight > 700) ||
+                        (nRowHeight + nHeightAfterIneligible) > 700)
                     {
                         nRowHeight = 0;
                         section.AddPageBreak();
