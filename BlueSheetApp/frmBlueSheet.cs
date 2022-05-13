@@ -3997,7 +3997,7 @@ namespace BlueSheetApp
                         (nRowHeight + nHeightAfterCMMPendingPayment) > 680)
                     {
                         nRowHeight = 0;
-                        section.AddPageBreak();
+                        //section.AddPageBreak();
                     }
                 }
 
@@ -4402,7 +4402,7 @@ namespace BlueSheetApp
                     if ((nRowHeight > 680) || (nRowHeight + nHeightAfterPending) > 680)
                     {
                         nRowHeight = 0;
-                        section.AddPageBreak();
+                        //section.AddPageBreak();
                     }
                 }
 
@@ -4928,7 +4928,7 @@ namespace BlueSheetApp
                         (nRowHeight + nHeightAfterIneligible) > 700)
                     {
                         nRowHeight = 0;
-                        section.AddPageBreak();
+                        //section.AddPageBreak();
                     }
                 }
 
@@ -7052,7 +7052,7 @@ namespace BlueSheetApp
                         (nRowHeight + nHeightAfterCMMPendingPayment) > 645)
                     {
                         nRowHeight = 0;
-                        section.AddPageBreak();
+                        //section.AddPageBreak();
                     }
                 }
 
@@ -7452,7 +7452,7 @@ namespace BlueSheetApp
                     if ((nRowHeight > 645) || ((nRowHeight + nHeightAfterPending) > 645))
                     {
                         nRowHeight = 0;
-                        section.AddPageBreak();
+                        //section.AddPageBreak();
                     }
                 }
 
@@ -7898,7 +7898,7 @@ namespace BlueSheetApp
                         (nRowHeight + nHeightAfterIneligible) > 645)
                     {
                         nRowHeight = 0;
-                        section.AddPageBreak();
+                        //section.AddPageBreak();
                     }
                 }
 
