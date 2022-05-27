@@ -3169,8 +3169,8 @@ namespace BlueSheetApp
                 section.PageSetup.TopMargin = "1.5in";
                 //section.PageSetup.LeftMargin = "0.3in";
                 //section.PageSetup.RightMargin = "0.3in";
-                section.PageSetup.LeftMargin = "0.8in";
-                section.PageSetup.RightMargin = "0.8in";
+                section.PageSetup.LeftMargin = "0.5in";
+                section.PageSetup.RightMargin = "0.5in";
                 section.PageSetup.BottomMargin = "0.5in";
 
                 section.PageSetup.DifferentFirstPageHeaderFooter = false;
@@ -3243,7 +3243,7 @@ namespace BlueSheetApp
                 //paraMembershipInfo.Format.SpaceBefore = "0.70in";
                 paraMembershipInfo.Format.SpaceBefore = "0.20in";
                 paraMembershipInfo.Format.SpaceAfter = "0.20in";
-                paraMembershipInfo.Format.LeftIndent = "0.75in";
+                paraMembershipInfo.Format.LeftIndent = "1.05in";
                 //paraMembershipInfo.Format.LeftIndent = "0.5in";
                 //paraMembershipInfo.Format.RightIndent = "0.5in";
                 paraMembershipInfo.Format.Alignment = ParagraphAlignment.Left;
@@ -3492,7 +3492,8 @@ namespace BlueSheetApp
                         if (PaidTo == EnumPaidTo.MedicalProvider)
                         {
                             expenseRow.PastCMM_Provider_Payment = gvBillPaid[10, nRow].Value.ToString();
-                            expenseRow.PastReimbursement = gvBillPaid[11, nRow].Value.ToString();
+                            expenseRow.Reimbursement = gvBillPaid[11, nRow].Value.ToString();
+                            //expenseRow.PastReimbursement = gvBillPaid[11, nRow].Value.ToString();
                             //expenseRow.Reimbursement = gvBillPaid[12, nRow].Value.ToString();
                         }
                         expenseRow.Balance = gvBillPaid[12, nRow].Value.ToString();
@@ -3518,7 +3519,7 @@ namespace BlueSheetApp
 
                     //col = table.AddColumn(MigraDocDOM.Unit.FromInch(1.4));
                     //col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
-                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(1.2));
+                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(1.3));
                     col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
                     col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.7));
@@ -3527,13 +3528,13 @@ namespace BlueSheetApp
                     col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.5));
                     col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.6));
+                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.7));
                     col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.5));
+                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.8));
                     col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.6));
+                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.7));
                     col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
                     //if (rbCreditCard.Checked)
@@ -3542,10 +3543,10 @@ namespace BlueSheetApp
                     //    col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
                     //}
 
-                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.6));
+                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.7));
                     col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.6));
+                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.7));
                     col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
                     col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.6));
@@ -4458,13 +4459,13 @@ namespace BlueSheetApp
                     colPending = tablePending.AddColumn(MigraDocDOM.Unit.FromInch(0.5));
                     colPending.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    colPending = tablePending.AddColumn(MigraDocDOM.Unit.FromInch(1.3));
+                    colPending = tablePending.AddColumn(MigraDocDOM.Unit.FromInch(1.5));
                     colPending.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    colPending = tablePending.AddColumn(MigraDocDOM.Unit.FromInch(0.6));
+                    colPending = tablePending.AddColumn(MigraDocDOM.Unit.FromInch(0.8));
                     colPending.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    colPending = tablePending.AddColumn(MigraDocDOM.Unit.FromInch(0.6));
+                    colPending = tablePending.AddColumn(MigraDocDOM.Unit.FromInch(0.8));
                     colPending.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
 
@@ -4480,7 +4481,7 @@ namespace BlueSheetApp
                     //colPending = tablePending.AddColumn(MigraDocDOM.Unit.FromInch(0.6));
                     //colPending.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    colPending = tablePending.AddColumn(MigraDocDOM.Unit.FromInch(3));
+                    colPending = tablePending.AddColumn(MigraDocDOM.Unit.FromInch(3.2));
                     colPending.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
                     MigraDocDOM.Tables.Row pending_Row = tablePending.AddRow();
@@ -4953,19 +4954,19 @@ namespace BlueSheetApp
                     MigraDocDOM.Tables.Column colIneligible = tableIneligible.AddColumn(MigraDocDOM.Unit.FromInch(0.6));
                     colIneligible.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    colIneligible = tableIneligible.AddColumn(MigraDocDOM.Unit.FromInch(0.7));
+                    colIneligible = tableIneligible.AddColumn(MigraDocDOM.Unit.FromInch(0.8));
                     colIneligible.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    colIneligible = tableIneligible.AddColumn(MigraDocDOM.Unit.FromInch(1.5));
+                    colIneligible = tableIneligible.AddColumn(MigraDocDOM.Unit.FromInch(1.8));
                     colIneligible.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    colIneligible = tableIneligible.AddColumn(MigraDocDOM.Unit.FromInch(0.9));
+                    colIneligible = tableIneligible.AddColumn(MigraDocDOM.Unit.FromInch(1));
                     colIneligible.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    colIneligible = tableIneligible.AddColumn(MigraDocDOM.Unit.FromInch(1.2));
+                    colIneligible = tableIneligible.AddColumn(MigraDocDOM.Unit.FromInch(1.1));
                     colIneligible.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    colIneligible = tableIneligible.AddColumn(MigraDocDOM.Unit.FromInch(2.1));
+                    colIneligible = tableIneligible.AddColumn(MigraDocDOM.Unit.FromInch(2.5));
                     colIneligible.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
                     MigraDocDOM.Tables.Row ineligible_Row = tableIneligible.AddRow();
@@ -6287,8 +6288,8 @@ namespace BlueSheetApp
                 section.PageSetup.TopMargin = "1.5in";
                 //section.PageSetup.LeftMargin = "0.3in";
                 //section.PageSetup.RightMargin = "0.3in";
-                section.PageSetup.LeftMargin = "0.8in";
-                section.PageSetup.RightMargin = "0.8in";
+                section.PageSetup.LeftMargin = "0.5in";
+                section.PageSetup.RightMargin = "0.5in";
 
                 section.PageSetup.BottomMargin = "0.5in";
 
@@ -6356,7 +6357,7 @@ namespace BlueSheetApp
                 //paraMembershipInfo.Format.SpaceBefore = "0.7in";
                 paraMembershipInfo.Format.SpaceBefore = "0.2in";
                 paraMembershipInfo.Format.SpaceAfter = "0.2in";
-                paraMembershipInfo.Format.LeftIndent = "0.75in";
+                paraMembershipInfo.Format.LeftIndent = "1.05in";
                 //paraMembershipInfo.Format.LeftIndent = "0.5in";
                 //paraMembershipInfo.Format.RightIndent = "0.5in";
                 paraMembershipInfo.Format.Alignment = ParagraphAlignment.Left;
@@ -6642,7 +6643,7 @@ namespace BlueSheetApp
                     col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.5));
                     col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(1.0));
+                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(1.1));
                     col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
                     col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.7));
@@ -6651,13 +6652,13 @@ namespace BlueSheetApp
                     col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.7));
                     col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
-                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.6));
-                    col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
-
-                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.5));
+                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.8));
                     col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
                     col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.6));
+                    col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
+
+                    col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.8));
                     col.Format.Alignment = MigraDocDOM.ParagraphAlignment.Center;
 
                     col = table.AddColumn(MigraDocDOM.Unit.FromInch(0.7));
@@ -6894,8 +6895,16 @@ namespace BlueSheetApp
                             cell.Format.Alignment = ParagraphAlignment.Right;
 
                             cell = rowData.Cells[8];
+                            if (PaidTo == EnumPaidTo.Member)
+                            {
+                                cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].PastReimbursement);
+                            }
+                            if (PaidTo == EnumPaidTo.MedicalProvider)
+                            {
+                                cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].PastCMM_Provider_Payment);
+                            }
                             //cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].PastReimbursement);
-                            cell.AddParagraph(lstPaidMedicalExpenseTableRow[i].PastCMM_Provider_Payment);
+                            
                             cell.Format.Font.Bold = false;
                             cell.Format.Font.Name = "Arial";
                             cell.Format.Font.Size = 8;
